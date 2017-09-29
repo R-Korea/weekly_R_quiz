@@ -1,0 +1,13 @@
+Q) Draw this chart with given data
+
+![target!](waterfall_result.PNG)
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(ggplot2)
+
+raw.data <- 
+  data.frame(
+    year=2009:2017, 
+    value=c(100,110,140,160,90,30,50,150,220))
+```

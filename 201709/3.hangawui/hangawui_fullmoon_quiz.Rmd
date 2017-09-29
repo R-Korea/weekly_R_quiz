@@ -1,0 +1,14 @@
+Q) 즐거운 한가위! 운치있는 그림을 그려주세요~
+
+![target!](hangawui_fullmoon_result.PNG)
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(data.table)
+library(ggplot2)
+
+r <- 10
+x <- -r:r
+
+data <- data.frame(x=x, y=sqrt(r^2-(x)^2))
+```

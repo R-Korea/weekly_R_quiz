@@ -1,4 +1,4 @@
-Q) Draw this chart with given data
+Q) 주어진 데이터를 이용해서 차트를 그려주세요 :)
 
 ![target!](heatmap_result.PNG)
 

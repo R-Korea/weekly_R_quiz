@@ -1,4 +1,4 @@
-Q) 즐거운 한가위! 주어진 데이터를 이용하여 운치있는 달과 산세를 그려주세요~
+Q) 즐거운 한가위! 운치있는 달과 산세를 자유롭게 그려주세요~
 
 ![target!](hangawui_result.PNG)
 
@@ -9,6 +9,4 @@ library(ggplot2)
 
 r <- 10
 x <- -r:r
-
-data <- data.frame(x=x, y=sqrt(r^2-(x)^2))
 ```

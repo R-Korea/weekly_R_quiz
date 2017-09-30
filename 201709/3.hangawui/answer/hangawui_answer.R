@@ -2,8 +2,6 @@ library(dplyr)
 library(data.table)
 library(ggplot2)
 
-set.seed(1004)
-
 r <- 10
 x <- -r:r
 

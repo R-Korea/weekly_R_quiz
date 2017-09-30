@@ -14,13 +14,13 @@ moons <-
 
 stars <- 
   data.frame(
-    x=x*0.8, 
-    y=ifelse(x < 4, -1, max(x) + 0.1*x + rnorm(length(x))))
+    x = x*0.8, 
+    y = ifelse(x < 4, -1, max(x) + 0.1*x + rnorm(length(x))))
 
 mountains <- 
   data.frame(
-    x=x, 
-    y=rev(abs(cos(x) - 0.5*(1:length(x)))) + rnorm(length(x)))
+    x = x, 
+    y = rev(abs(cos(x) - 0.5*(1:length(x)))) + rnorm(length(x)))
   
 ggplot(NULL) +
   

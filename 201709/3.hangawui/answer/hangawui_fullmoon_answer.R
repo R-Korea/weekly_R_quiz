@@ -2,20 +2,43 @@ library(dplyr)
 library(data.table)
 library(ggplot2)
 
+set.seed(1004)
+
 r <- 10
 x <- -r:r
 
-data <- data.frame(x=x, y=sqrt(r^2-(x)^2))
+moons <- 
+  data.frame(
+    x = x, 
+    y = 1.2*sqrt(r^2 - x^2))
 
-data %>%
-  ggplot(aes(x=x, y=y)) +
-  geom_point(alpha=1-abs(x)/max(x), size=10-abs(x), colour='yellow') +
-  geom_bar(
-    aes(y=rev(abs(cos(x) - 0.5*(1:length(x))))), 
-    stat='identity', 
-    fill='gray80', 
-    width=0.3) +
-  geom_line(stat='identity', y=rev(abs(cos(x) - 0.5*(1:length(x)))), colour='white', linetype='dashed') +
+stars <- 
+  data.frame(
+    x=x*0.8, 
+    y=ifelse(x < 4, -1, max(x) + 0.1*x + rnorm(length(x))))
+
+mountains <- 
+  data.frame(
+    x=x, 
+    y=rev(abs(cos(x) - 0.5*(1:length(x)))) + rnorm(length(x)))
+  
+ggplot(NULL) +
+  
+  # draw moons
+  geom_point(aes(moons$x, moons$y), alpha=1-abs(x)/max(x), size=10-abs(x), colour='yellow') +
+  
+  # draw stars
+  geom_point(aes(stars$x, stars$y), colour='white') +
+  geom_line(aes(stars$x, stars$y), colour='white', linetype='dashed') +
+  
+  # draw mountains
+  geom_bar(aes(mountains$x, mountains$y), stat='identity', fill='#5a7f48', width=0.3) +
+  geom_line(aes(mountains$x, mountains$y), colour='green', linetype='dashed') +
+  
+  # write the message
+  geom_text(aes(x=7, y=13.5), label='즐거운 한가위 되세요~', colour='yellow', fontface='italic', size=7) +
+  
+  # background settings
   theme(
     legend.position = 'none',
     panel.background = element_rect(fill='black'),
@@ -24,4 +47,4 @@ data %>%
     axis.title = element_blank(),
     axis.ticks = element_blank(),
     title = element_text(size=20, face='bold')) +
-  geom_text(x=7, y=10.5, label='즐거운 한가위 되세요~', colour='#f2ca5c', fontface='bold', size=7)
+  scale_y_continuous(limits=c(0, max(moons$y)*1.2))

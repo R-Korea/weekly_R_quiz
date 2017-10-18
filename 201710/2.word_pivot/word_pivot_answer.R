@@ -17,5 +17,4 @@ corp <-
 tdm <-
   TermDocumentMatrix(corp, control=list(wordLengths=c(1,Inf)))
 
-raw.data
 t(as.matrix(tdm))

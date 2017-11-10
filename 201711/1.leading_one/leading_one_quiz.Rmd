@@ -13,11 +13,14 @@ gen.mat <- function(dim, min=0, max=1){
 
 (adjmat <- gen.mat(dim=5))
 ```
-![target!](original_dataset.PNG)  
-
+![target!](original_dataset_1.PNG)  
 ![target!](leading_one_result.PNG)  
 
 Q2) 앞서 만든 leading.one 함수를 이용하여 행 혹은 열마다  
 **처음 등장하는 0이 아닌 숫자만 남기는 함수** leading.num 을 작성해주세요  
 
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+(adjmat <- gen.mat(dim=5, min=0, max=2))
+```
+![target!](original_dataset_2.PNG) 
 ![target!](leading_num_result.PNG)  

@@ -1,4 +1,4 @@
-Q) 초기날짜값과 다음 구매까지 걸린 일수(day)를 이용하여 
+Q) 고객별 초기날짜값(= init.buy) 및 다음 구매까지 걸린 일수(= terms)를 이용하여  
 첨부 그림과 같은 yyyy-MM-dd 형태로 표현하는 함수를 작성해주세요 
 
 > hint : class, unclass, apply

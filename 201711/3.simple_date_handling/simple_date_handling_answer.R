@@ -8,12 +8,12 @@ colnames(terms) <- LETTERS[1:3]
 terms
 
 term.dates <- function(init.buy, terms){
-  data <- rbind(unclass(as.Date(init.buy)), terms) # cast as numeric & add numeric init.date to terms as head of columns 
-  num.data <- apply(data, 2, cumsum) # calculate cummulative terms
-  class(num.data) <- "Date" # cast as Date
-  char.data <- as.character(num.data) # cast as character
-  res <- matrix(char.data, nrow(terms)+1, ncol(terms)) # add dimension since class method remove dimension info
-  colnames(res) <- colnames(terms) # tag column name
+  data <- rbind(unclass(as.Date(init.buy)), terms) # unclass로 numeric 변환, 그후 terms에 head로 rbind
+  num.data <- apply(data, 2, cumsum) # terms의 누적합을 계산
+  class(num.data) <- "Date" # Date로 변환
+  char.data <- as.character(num.data) # character로 변환
+  res <- matrix(char.data, nrow(terms)+1, ncol(terms)) # class 함수가 dimension 정보를 없앴기에 다시 추가
+  colnames(res) <- colnames(terms) # 컬럼명을 붙여줌
   as.data.frame(res)
 }
 

@@ -1,6 +1,6 @@
-Q) 주어진 고객별 구매일자 데이터를 이용하여 다음 그림과 같은 일자별 고객 잔류표를 출력해주세요
+Q) 주어진 고객별 구매일자 데이터를 이용하여 그림과 같은 일자별 고객 잔류표를 출력해주세요
 
-![target!](retension_result.PNG)
+
 
 > hints : diff, difftime
 
@@ -34,3 +34,4 @@ raw.data <-
   distinct %>%
   arrange(user.id, buy.date)
 ```
+![target!](retension_result_.PNG)

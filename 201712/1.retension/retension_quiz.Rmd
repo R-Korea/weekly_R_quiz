@@ -2,36 +2,32 @@ Q) 주어진 고객별 구매일자 데이터를 이용하여 그림과 같은 �
 
 
 
-> hints : diff, difftime, dcast
+> hints : difftime, dcast
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 library(dplyr)
 library(data.table)
 
-set.seed(171209)
-
-rdate <- function(n=1, from=Sys.Date()-365*1, to=Sys.Date()){
-  interval <- difftime(round(to), round(from))
-  rday <- rbeta(n, 1, 3) * interval
-  from + floor(rday)
-}
-
-rstr <- function(n=1, str.len=1) {
-  rn <- runif(str.len * n, 1, 24)
-  df <- as.data.frame(matrix(rn, str.len, n))
-  num.to.str <- function(v) paste0(LETTERS[v], collapse='')
-  res <- sapply(df, num.to.str)
-  names(res) <- NULL
-  res
-}
-
-n <- 5000
+rm(list=ls())
 
 raw.data <-
   data.frame(
-    user.id = rstr(n,3),
-    buy.date = rdate(n, from=as.Date('2017-01-01'), to=as.Date('2017-01-15'))) %>% 
-  distinct %>%
-  arrange(user.id, buy.date)
+    user.id = c(
+      rep('A',4),rep('B',3),rep('C',5),rep('D',4),rep('E',4),rep('F',1),
+      rep('G',7),rep('H',6),rep('I',8),rep('J',7),rep('K',2),rep('L',3)),
+    buy.date = c(
+      '2017-01-01','2017-01-02','2017-01-03','2017-01-15',
+      '2017-01-02','2017-01-03','2017-01-04',
+      '2017-01-02','2017-01-03','2017-01-05','2017-01-11','2017-01-18',
+      '2017-01-03','2017-01-04','2017-01-05','2017-01-15',
+      '2017-01-04','2017-01-05','2017-01-06','2017-01-17',
+      '2017-01-04',
+      '2017-01-04','2017-01-05','2017-01-06','2017-01-15','2017-01-16','2017-01-17','2017-01-20',
+      '2017-01-05','2017-01-06','2017-01-07','2017-01-15','2017-01-16','2017-01-21',
+      '2017-01-06','2017-01-07','2017-01-08','2017-01-15','2017-01-16','2017-01-20','2017-01-21','2017-01-22',
+      '2017-01-08','2017-01-10','2017-01-11','2017-01-15','2017-01-16','2017-01-17','2017-01-21',
+      '2017-01-08','2017-01-11',
+      '2017-01-10','2017-01-11','2017-01-13')) %>%
+  mutate(buy.date = as.Date(buy.date))
 ```
 ![target!](retension_result.PNG)

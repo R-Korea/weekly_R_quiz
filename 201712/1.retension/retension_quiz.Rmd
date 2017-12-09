@@ -34,4 +34,4 @@ raw.data <-
   distinct %>%
   arrange(user.id, buy.date)
 ```
-![target!](retension_result_.PNG)
+![target!](retension_result.PNG)

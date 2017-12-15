@@ -1,0 +1,40 @@
+Q) 주어진 고객별 구매 데이터를 이용하여 그림과 같은 그룹별, 구매일별 고객 구매&취소율 차트를 그려주세요
+
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(stringr)
+
+rm(list=ls())
+
+set.seed(171215)
+
+user.count <- 950
+  
+user_reservation <- 
+  data.frame(
+    idx = 1:user.count,
+    user.id = paste('u_', str_pad(1:user.count, 3, pad='0'), sep=''),
+    cancel = ifelse(runif(user.count, 0, 1) > .9, 'Y', 'N')) %>%
+  mutate(idx.group = floor((idx-1)/100)+1)
+
+first.open <- as.Date('2017-12-13')
+
+purchase_open_date <-
+  data.frame(
+    idx.group = 1:10,
+    open.date = first.open + sort(sample(0:20,10,replace=TRUE)))
+
+purchase <-
+  user_reservation %>%
+  inner_join(purchase_open_date, by='idx.group') %>%
+  mutate(
+    buy.date = open.date + floor(rexp(user.count, 1)),
+    buy.date = ifelse(cancel == 'Y', NA, buy.date),
+    buy.date = ifelse(runif(user.count, 0, 1) > .9, NA, buy.date),
+    buy.date = as.Date(buy.date, origin='1970-01-01'),
+    day.gap = as.numeric(difftime(buy.date, open.date, units='days')))
+```
+
+![target!](daily_purchase_by_group_result.PNG)

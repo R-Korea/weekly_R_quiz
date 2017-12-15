@@ -37,4 +37,4 @@ purchase <-
     day.gap = as.numeric(difftime(buy.date, open.date, units='days')))
 ```
 
-![target!](daily_purchase_by_group_result.PNG)
+![target!](daily_purchase_by_group_result_.PNG)

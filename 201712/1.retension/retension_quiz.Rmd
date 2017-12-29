@@ -1,7 +1,5 @@
 Q) 주어진 고객별 구매일자 데이터를 이용하여 그림과 같은 최초구매일별 고객 잔류표를 출력해주세요
 
-
-
 > hints : difftime, dcast
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}

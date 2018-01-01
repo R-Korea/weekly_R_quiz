@@ -23,7 +23,7 @@ plot.data <-
   melt(id.vars='car.name') %>%
   rbind(subset(., variable == names(scaled.data)[1]))
 
-# create new coord : inherit coord_polar
+# inherit coord_polar
 coord_radar <- 
   function(theta='x', start=0, direction=1){
     # input parameter sanity check

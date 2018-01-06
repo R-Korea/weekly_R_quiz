@@ -16,6 +16,8 @@ Table of Contents
    * [10 월](#10-월)
    * [11 월](#11-월)
    * [12 월](#12-월)
+* [2018 년](#2018-년)
+   * [1 월](#1-월)
 
 ## 2017 년
 ### 9 월
@@ -163,6 +165,21 @@ Table of Contents
 </div>
 
 <a href="./201712/3.radar/radar_answer.R" target="_blank">정답 보기</a>
+</details>
+
+## 2018 년
+### 1 월
+<details><summary>1. unstack_column</summary>
+    
+<a href="./201801/1.unstack_column/unstack_column_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 데이터셋의 학생별 성적이력을 unstack 하는 함수를 작성해주세요~</div>
+    
+<div align="center">
+  <img src="./201801/1.unstack_column/unstack_column_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201801/1.unstack_column/unstack_column_answer.R" target="_blank">정답 보기</a>
 </details>
 
 

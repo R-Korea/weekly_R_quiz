@@ -18,7 +18,7 @@ from collections import namedtuple, defaultdict
 
 IGNORED_PATH = [
     "assets", ".git", ".cache", "Dockerfile", "docker-compose.yml", "utils",
-    "tests", "temp", ".mypy_cache", "main.py", "README.md"
+    "tests", "temp", ".mypy_cache", "main.py", "README.md", "LICENSE"
 ]
 
 
@@ -75,7 +75,7 @@ def create_node(path: str) -> Node:
     Returns:
         Node: Node information
     """
-    _, date, subject, _ = path.split("/")
+    _, date, subject, _ = path.split(os.sep)
 
     year = int(date[:4])
     month = int(date[-2:])

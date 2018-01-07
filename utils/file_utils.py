@@ -101,8 +101,10 @@ def create_quizs(nodes: List[Node]) -> List[Quiz]:
 
         quiz_node = Quiz(
             int(year),
-            int(month), ". ".join(subject.split(".")), quiz["answer_path"],
-            quiz["quiz_path"], quiz["image_path"])
+            int(month), ". ".join(subject.split(".")),
+            quiz.get("answer_path", None),
+            quiz.get("quiz_path", None),
+            quiz.get("image_path", None))
         result.append(quiz_node)
 
     return result

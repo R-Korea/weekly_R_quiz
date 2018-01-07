@@ -42,6 +42,9 @@ def print_month(month: int) -> str:
 
 def print_image(quiz: Quiz) -> str:
     """Returns <img tag>"""
+    if not quiz.image_path:
+        return ""
+
     template = f"""
 <div align="center">
   <img src="{quiz.image_path}" alt="Quiz Image" width="50%" max-height="30%">
@@ -53,6 +56,15 @@ def print_image(quiz: Quiz) -> str:
 def print_question(quiz: Quiz) -> str:
     """Returns a link to the question in markdown format"""
     template = f"[{quiz.subject}]({quiz.quiz_path})"
+    return template
+
+
+def print_answer(quiz: Quiz) -> str:
+    """Returns a link to the question answer"""
+    if not quiz.answer_path:
+        return ""
+
+    template = f"""<a href="{quiz.answer_path}" target="_blank">정답 보기</a>"""
     return template
 
 
@@ -68,12 +80,13 @@ def print_quiz(quiz: Quiz) -> str:
         question = f.readline().strip()
 
     image_tag = print_image(quiz)
+    answer_tag = print_answer(quiz)
 
     template = f"""<details><summary>{subject}</summary>
     {link}
 <div>{question}</div>
     {image_tag}
-<a href="{quiz.answer_path}" target="_blank">정답 보기</a>
+{answer_tag}
 </details>
 """
 

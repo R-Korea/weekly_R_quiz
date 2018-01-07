@@ -173,13 +173,13 @@ Table of Contents
     
 <a href="./201801/1.unstack_column/unstack_column_quiz.Rmd" target="_blank">문제 바로 가기</a>
 
-<div>Q) 주어진 데이터셋의 학생별 성적이력을 unstack 하는 함수를 작성해주세요~</div>
+<div>Q) 주어진 데이터셋의 학생별 성적이력을 unstack 하는 함수 unstack.col을 작성해주세요~</div>
     
 <div align="center">
   <img src="./201801/1.unstack_column/unstack_column_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
-<a href="./201801/1.unstack_column/unstack_column_answer.R" target="_blank">정답 보기</a>
+
 </details>
 
 

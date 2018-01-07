@@ -20,3 +20,14 @@ unstack.col <- function(d, k=1, v=2){
 }
 
 unstack.col(grade)
+
+# restore column as stack form
+stack.col <- function(d, k=1, v=2){
+  kc <- as.character(unique(d[,k]))
+  vc <- sapply(kc, function(x) as.character(d[d[,k]==x,][,v]))
+  res <- as.data.frame(cbind(kc, vc))
+  names(res) <- colnames(d) 
+  res
+}
+
+stack.col(unstack.col(grade))

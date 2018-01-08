@@ -3,9 +3,9 @@
 <img src="./assets/logo.png" alt="Logo" width="50%">
 </div>
 
-# KRUG Weekly Quiz
+# R Korea Weekly Quiz
 
-KRUG에서 진행한 주말맞이 R Quiz 모음입니다.
+R Korea에서 진행한 주말맞이 R Quiz 모음입니다.
 
 
 Table of Contents

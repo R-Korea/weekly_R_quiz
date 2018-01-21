@@ -31,7 +31,6 @@ baseball <- function(){
       sum(guess == answer)
     
     ball <- {
-      right <- unique(guess[guess == answer])
       wrong <- guess[guess != answer] 
       sum(wrong %in% answer)
     }

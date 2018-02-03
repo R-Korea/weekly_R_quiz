@@ -15,7 +15,7 @@ unstack.col <- function(d, k=1, v=2){
   kc <- unlist(rep(d[,k], n, each=TRUE)) 
   vc <- unlist(d[,v]) 
   res <- data.frame(kc, vc)
-  names(res) <- colnames(d) 
+  names(res) <- colnames(d)[c(k, v)] 
   res
 }
 
@@ -26,7 +26,7 @@ stack.col <- function(d, k=1, v=2){
   kc <- as.character(unique(d[,k]))
   vc <- sapply(kc, function(x) as.character(d[d[,k]==x,][,v]))
   res <- as.data.frame(cbind(kc, vc))
-  names(res) <- colnames(d) 
+  names(res) <- colnames(d)[c(k, v)] 
   res
 }
 

@@ -17,6 +17,6 @@ raw.data <-
 ```
 
 1. 구매가 이루어졌음을 뜻하는 purchase를 기준으로 끊어 chain_id를 부여한 뒤  
-2. 다음과 같은 chain column 형태로 묶어주세요~ (id: chr, chain.id: num, page: List[chr])
+2. 다음과 같은 chain column 형태로 묶어주세요~ (id: chracter, chain.id: numeric, page: List[chracter])
 
 ![target!](purchase_chain_result.PNG)

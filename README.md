@@ -3,9 +3,9 @@
 <img src="./assets/logo.png" alt="Logo" width="50%">
 </div>
 
-# R Korea Weekly Quiz
+# R-Korea Weekly Quiz
 
-R Korea에서 진행한 주말맞이 R Quiz 모음입니다.
+R-Korea에서 진행한 주말맞이 R Quiz 모음입니다.
 
 
 Table of Contents
@@ -18,6 +18,7 @@ Table of Contents
    * [12 월](#12-월)
 * [2018 년](#2018-년)
    * [1 월](#1-월)
+   * [2 월](#2-월)
 
 ## 2017 년
 ### 9 월
@@ -177,6 +178,33 @@ Table of Contents
     
 <div align="center">
   <img src="./201801/1.unstack_column/unstack_column_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201801/1.unstack_column/unstack_column_answer.R" target="_blank">정답 보기</a>
+</details>
+
+<details><summary>2. number_baseball</summary>
+    
+<a href="./201801/2.number_baseball/number_baseball_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) 숫자야구 게임을 만들어주세요!</div>
+    
+<div align="center">
+  <img src="./201801/2.number_baseball/number_baseball_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201801/2.number_baseball/number_baseball_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 2 월
+<details><summary>1. purchase_chain</summary>
+    
+<a href="./201802/1.purchase_chain/purchase_chain_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) 데이터 분석을 위한 전처리를 해주세요!</div>
+    
+<div align="center">
+  <img src="./201802/1.purchase_chain/purchase_chain_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
 

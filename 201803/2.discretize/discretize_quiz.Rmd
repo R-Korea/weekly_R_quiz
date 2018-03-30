@@ -33,4 +33,4 @@ discretize(
 discretize(data, equal.count=TRUE, breaks=c(-326, 50.6, 307))
 ```
 
-![target!](discretize.PNG)
+![target!](discretize_result.PNG)

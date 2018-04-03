@@ -24,10 +24,12 @@ library(magrittr)
 discretize(data, breaks=7, equal.count=FALSE) %>% plot(main='range cut : equal width')
 discretize(data, breaks=7, equal.count=TRUE) %>% plot(main='range cut : equal count')
 discretize(data, equal.count=FALSE, right=TRUE) %>% plot(main='range with right closed')
-discretize(
-  data, 
-  breaks=c(quantile(data, probs=c(0, .3, 1))), 
-  labels=c('[0%~30%)', '[30%~100%]')) %>% plot(main='(custom labels) & (manual break points)')
+data %>%
+  discretize(
+    num.vec=.,
+    breaks=c(quantile(., probs=c(0, .3, 1))), 
+    labels=c('[0%~30%)', '[30%~100%]')) %>% 
+  plot(main='(custom labels) & (manual break points)')
 
 # error cases : `equal.count` with `manual breaks`?
 discretize(data, equal.count=TRUE, breaks=c(-326, 50.6, 307))

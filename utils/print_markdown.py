@@ -17,7 +17,7 @@ QUIZ_LIST = sorted(
 
 MARKDOWN_HEADER = """
 <div align="center">
-<img src="./assets/logo.png" alt="Logo" width="50%">
+<img src="./assets/weekly_quiz_logo.svg" alt="Logo" width="50%">
 </div>
 
 # R Korea Weekly Quiz

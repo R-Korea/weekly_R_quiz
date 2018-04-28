@@ -1,6 +1,6 @@
 
 <div align="center">
-<img src="./assets/logo.png" alt="Logo" width="50%">
+<img src="./assets/weekly_quiz_logo.svg" alt="Logo" width="50%">
 </div>
 
 # R Korea Weekly Quiz
@@ -19,6 +19,7 @@ Table of Contents
 * [2018 년](#2018-년)
    * [1 월](#1-월)
    * [2 월](#2-월)
+   * [3 월](#3-월)
 
 ## 2017 년
 ### 9 월
@@ -207,7 +208,34 @@ Table of Contents
   <img src="./201802/1.purchase_chain/purchase_chain_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
+<a href="./201802/1.purchase_chain/purchase_chain_answer.R" target="_blank">정답 보기</a>
+</details>
 
+<details><summary>2. moving_average</summary>
+    
+<a href="./201802/2.moving_average/moving_average_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 데이터를 이용하여 3개월 이동평균 차트를 그려주세요!</div>
+    
+<div align="center">
+  <img src="./201802/2.moving_average/moving_average_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201802/2.moving_average/moving_average_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 3 월
+<details><summary>1. path_drawing</summary>
+    
+<a href="./201803/1.path_drawing/path_drawing_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 데이터를 이용하여 제품군별 고객수 객단가 추이를 그려주세요 :)</div>
+    
+<div align="center">
+  <img src="./201803/1.path_drawing/path_drawing_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201803/1.path_drawing/path_drawing_answer.R" target="_blank">정답 보기</a>
 </details>
 
 

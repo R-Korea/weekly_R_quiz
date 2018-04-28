@@ -4,7 +4,6 @@ Q) 통일한국은 과연 우리의 미래가 될 수 있을까요?
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 library(ggplot2)
-library(dplyr)
 
 korea <-
   map_data('world') %>% 

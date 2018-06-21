@@ -90,7 +90,7 @@ def create_quizs(nodes: List[Node]) -> List[Quiz]:
         key = "{}!{}!{}".format(node.year, node.month, node.subject)
         if node.path.lower().endswith("png"):
             quiz_list[key]["image_path"] = node.path
-        elif node.path.lower().endswith("rmd"):
+        elif "quiz" in node.path.lower():
             quiz_list[key]["quiz_path"] = node.path
         elif "answer" in node.path.lower():
             quiz_list[key]["answer_path"] = node.path

@@ -1,0 +1,337 @@
+---
+title: "PieDonut Plot 만들기"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message=FALSE,warning=FALSE,comment=NA,out.width='70%',fig.align = 'center')
+```
+
+
+Pie chart 와 donut chart를 결합한 PieDonut plot을 만들고자 합니다. 여러가지 방법이 있겠지만 저는 ggforce 패키지의 geom_arc_bar() 함수를 이용하였습니다. ggforce 패키지의 vignette는 여기서 보실 수 있습니다. 
+
+https://cran.r-project.org/web/packages/ggforce/vignettes/Visual_Guide.html
+
+
+## 오늘의 문제 
+
+moonBook패키지의 acs데이터를 이용하여 다음과 같은 그림을 그리는 것이 문제였습니다.
+
+```{r,echo=FALSE}
+require(moonBook)
+require(ggplot2)
+require(dplyr)
+require(webr)
+
+PieDonut(acs,aes(Dx,smoking),explode=1,explodeDonut=TRUE,labelposition=1)
+```
+
+이 그림은 먼저 진단명으로 pie chart를 그리고 각 진단명에 해당하는 환자들의 흡연상태에 따라 세군으로 나누어 같은 계통의 색깔로 doughnut plot을 그린 것입니다
+
+##  PieDonut()함수의 이용
+
+위의 그림를 그리기 위해 PieDonut()함수를 만들어 webr패키지에 넣었습니다. 다음 명령어를 사용하시면 됩니다. 
+
+```{r,eval=FALSE}
+require(moonBook)
+require(ggplot2)
+require(webr)
+
+PieDonut(acs,aes(Dx,smoking),explode=1,explodeDonut=TRUE,labelposition=1)
+```
+
+또한 이 함수의 자세한 사용 예는 다음에 있습니다. 단순히 이 함수를 사용하기를 원하시는 분들은 다음의 사용 예만 읽어보시면 됩니다. 
+
+http://rpubs.com/cardiomoon/398623
+
+
+## 어떻게 그릴 것인가?
+
+먼저 이 그림은 가운데의 pie chart와 주변의 donut chart로 나누어 생각해야 합니다. 먼저 pie chart 를 그리고 pie chart의 색깔을 알아낸 후 흰색에서부터 원하는 색깔로 변해가는 gradient color를 만들어 doughnut의 색깔을 입히면 되겠습니다.
+
+## 필요한 패키지 불러오기
+
+
+다음 패키지들이 필요합니다.
+
+```{r}
+require(moonBook)
+require(ztable)
+require(ggplot2)
+require(dplyr)
+require(ggforce)
+```
+
+## 1. 준비운동 
+
+ggforce 패키지의 geom_arc_bar()함수를 어떻게 쓸까요? ggforce 패키지 설명서에 있는 예제를 한번 보겠습니다. pie라는 data.frame을 정의합니다. 
+
+```{r}
+pie <- data.frame(
+    state = c('eaten', 'eaten but said you didn\'t', 'cat took it', 
+              'for tonight', 'will decompose slowly'),
+    start = c(0, 1, 2, 3, 4),
+    end = c(1, 2, 3, 4, 2*pi),
+    focus = c(0.2, 0, 0, 0, 0),
+    stringsAsFactors = FALSE
+)
+pie
+```
+
+이 데이터는 모두 5개의 파이로 되어있고 start는 파이의 시작각도(radian), end는 파이의 끝각도, focus는 튀어나오는 거리가 담겨 있습니다. 이 데이터를 이용하여 pie chart 를 그리려면 다음과 같이 합니다. 
+
+```{r}
+p <- ggplot() + theme_no_axes() + coord_fixed()
+
+# For low level control you define the start and end angles yourself
+p + geom_arc_bar(aes(x0 = 0, y0 = 0, r0 = 0, r = 1, start = start, end = end, 
+                     fill = state),
+                 data = pie)
+```
+
+geom_arc_bar()함수의 인수를 보면 파이의 중심점의 x,y 좌표를 x0, y0 로 주고 파이모양 원호의 짧은쪽 반지름이 r0, 긴쪽 반지름을 r1으로 줍니다. 이제 arc_bar를 튀어나오게 하려면 explode인수를 줍니다.
+```{r}
+# For low level control you define the start and end angles yourself
+p + geom_arc_bar(aes(x0 = 0, y0 = 0, r0 = 0, r = 1, start = start, end = end, 
+                     fill = state, explode=focus),
+                 data = pie)
+```
+
+
+## 2. Pie Chart 에 사용할 데이터 만들기
+
+
+먼저 pie chart를 그리기 위해서는 세개의 병명에 해당하는 환자들의 명수를 구해야 합니다.
+
+```{r}
+data<-acs
+pies="Dx"
+donuts="smoking"
+df=table(data[[pies]]) %>% as.data.frame 
+colnames(df)[1]=pies
+df
+```
+
+
+시작각도와 끝 각도를 정해주어야 하므로 전체 인원 중 각 군에 해당하는 숫자들의 누적합계를 구하여 end로 하고 시작점을 start로 합니다. 전체 인원 수를 total에 넣은 후 start와 end를 각도로 바꾸기 위하여 2*pi로 곱하고 total로 나누어 줍니다.그리고 원호의 반지름은 r0는 0.3, r1은 1을 defalut로 하겠습니다. 시작각도 start는 0으로 합니다. 그리고 튀어나오는 파이는 explode에 저장하고 튀어나오는 거리는 explodePos에 저장합니다. 시작각도와 끝 각도의 중간 각도를 계산해 mid에 넣습니다. 파이가 튀어나올 경우 원점이 달라지므로 원점의 x,y 좌표를 계산해 x,y에 넣습니다. 이때기초적인 삼각함수가 필요합니다. 즉 튀어나오는 거리가 explodePos이고 각도가 mid이므로 x좌표는 거리\*sin(각도), y좌표는 거리\*cos(각도)가 됩니다. 또한 원호의 중심에 라벨을 붙이기 위해 라벨을 만듭니다. 그리고 원호의 중심좌표 labelx,labely를 구합니다. maxx는 plot의 x좌표 끝입니다.
+
+```{r}
+explode=1
+explodePos=0.1
+r0=0.3
+r1=1
+r2=1.2
+start=0
+maxx=NULL
+df$end=cumsum(df$Freq)
+df$start=dplyr::lag(df$end)
+df$start[1]=0
+total=sum(df$Freq)
+df$start1=df$start*2*pi/total
+df$end1=df$end*2*pi/total
+df$start1=df$start1+start
+df$end1=df$end1+start
+df$focus=0
+df$focus[explode]=explodePos
+df$mid=(df$start1+df$end1)/2
+df$x=ifelse(df$focus==0,0,df$focus*sin(df$mid))
+df$y=ifelse(df$focus==0,0,df$focus*cos(df$mid))
+df$label=df[[pies]]
+df$ratio=df$Freq/sum(df$Freq)
+df$label=paste0(df$label,"\n(",scales::percent(df$ratio),")")
+df$labelx=(r0+r1)/2*sin(df$mid)+df$x
+df$labely=(r0+r1)/2*cos(df$mid)+df$y
+if(!is.factor(df[[pies]])) df[[pies]]<-factor(df[[pies]])
+df
+```
+
+## 3. Pie Chart 그리기
+
+ggplot의 기본 색깔은 다음과 같이 구할 수 있습니다.  
+
+```{r}
+gg_color_hue <- function(n) {
+        hues = seq(15, 375, length = n + 1)
+        hcl(h = hues, l = 65, c = 100)[1:n]
+}
+
+mainCol=gg_color_hue(nrow(df))
+```
+
+가운데의 pie chart는 이 데이터로 그리면 됩니다. 나중에 파이챠트와 도넛챠트를 같이 그리려면 배경을 투명하게 만들어야 하므로 다음 함수를 사용합니다.
+
+```{r}
+
+transparent=function(size=0){
+
+
+        temp=theme(rect= element_rect(fill = 'transparent',size=size),
+                   panel.background=element_rect(fill = 'transparent'),
+                   panel.border=element_rect(size=size),
+                   panel.grid.major=element_blank(),
+                   panel.grid.minor=element_blank())
+        temp
+}
+
+ p <- ggplot() + theme_no_axes() + coord_fixed()
+
+ if(is.null(maxx)) {
+                r3=r2+0.3
+        } else{
+                r3=maxx
+        }
+ p1<-p + geom_arc_bar(aes_string(x0 = "x", y0 = "y",
+                                        r0 = as.character(r0), r = as.character(r1),
+                                        start="start1",end="end1",
+                                        fill = pies),alpha=0.7,color="white",
+                             data = df)+transparent()+
+                scale_fill_manual(values=mainCol)+
+                xlim(r3*c(-1,1))+ylim(r3*c(-1,1))+guides(fill=FALSE)
+ 
+ p1 <-p1+geom_text(aes_string(x="labelx",y="labely",label="label"),data=df)
+ p1<-p1+annotate("text",x=0,y=0,label=pies)
+ p1
+```
+
+## 3. 도넛에 사용할 색깔 정하기
+
+도넛에 사용할 색깔을 정하기 위해 다음과 같은 함수를 사용했습니다.
+
+
+```{r}
+makeSubColor=function(main,no=3){
+        result=c()
+        for(i in 1:length(main)){
+                temp=ztable::gradientColor(main[i],n=no+2)[2:(no+1)]
+                result=c(result,temp)
+        }
+        result
+}
+
+subColor=makeSubColor(mainCol,no=length(unique(data[[donuts]])))
+subColor
+```
+
+## 4. 도넛에 사용할 데이터 만들기
+
+도넛에 사용할 데이터를 만듭니다. 만일 도넛의 일부를 튀어나오게 만들고 싶다면 selected에 지정해줍니다(default는 NULL입니다). 파이의 경우와 마찬가지로 시작각도와 끝각도를 구합니다. 
+
+```{r}
+selected=NULL
+df3=data.frame(table(data[[donuts]],data[[pies]]),stringsAsFactors = FALSE)
+colnames(df3)[1:2]=c(donuts,pies)
+a=table(data[[donuts]],data[[pies]])
+df3$group=rep(colSums(a),each=nrow(a))
+df3$pie=rep(1:ncol(a),each=nrow(a))
+total=sum(df3$Freq)
+
+df3$ratio1=df3$Freq/total
+df3$ratio=scales::percent(df3$Freq/df3$group)
+df3$end=cumsum(df3$Freq)
+df3$start=dplyr::lag(df3$end)
+df3$start[1]=0
+df3$start1=df3$start*2*pi/total
+df3$end1=df3$end*2*pi/total
+df3$start1=df3$start1+start
+df3$end1=df3$end1+start
+df3$mid=(df3$start1+df3$end1)/2
+df3$focus=0
+
+if(!is.null(selected)){
+                        df3$focus[selected]=explodePos
+} else if(!is.null(explode)) {
+                        selected=c()
+                        for(i in 1:length(explode)){
+                                start=1+nrow(a)*(explode[i]-1)
+                                selected=c(selected,start:(start+nrow(a)-1))
+                        }
+                        selected
+                        df3$focus[selected]=explodePos
+}
+```
+
+파이가 튀어나오는 경우 원점을 다시 계산해야 합니다. 원점의 x좌표와 y좌표를 계산합니다.
+라벨을 만들고 라벨의 hjust, vjust를 구합니다.
+
+```{r}
+df3$x=0
+df3$y=0
+if(!is.null(explode)){
+                        explode
+                        for(i in 1:length(explode)){
+
+                                xpos=df$focus[explode[i]]*sin(df$mid[explode[i]])
+                                ypos=df$focus[explode[i]]*cos(df$mid[explode[i]])
+
+                                df3$x[df3$pie==explode[i]]=xpos
+                                df3$y[df3$pie==explode[i]]=ypos
+                        }
+}
+df3$no=1:nrow(df3)
+df3$label=df3[[donuts]]
+df3$label=paste0(df3$label,"\n(",df3$ratio,")")
+df3$hjust=ifelse((df3$mid %% (2*pi))>pi,1,0)
+df3$vjust=ifelse(((df3$mid %% (2*pi)) <(pi/2))|(df3$mid %% (2*pi) >(pi*3/2)),0,1)
+df3$no=factor(df3$no)
+df3
+```
+
+라벨의 x좌표와 y좌표를 계산합니다. 또한 도넛과 라벨을 이어줄 선분의 좌표를 구합니다.
+```{r}
+explodeDonut=TRUE 
+df3$radius=r2
+if(explodeDonut) df3$radius[df3$focus!=0]=df3$radius[df3$focus!=0]+df3$focus[df3$focus!=0]
+
+df3$segx=df3$radius*sin(df3$mid)+df3$x
+df3$segy=df3$radius*cos(df3$mid)+df3$y
+df3$segxend=(df3$radius+0.05)*sin(df3$mid)+df3$x
+df3$segyend=(df3$radius+0.05)*cos(df3$mid)+df3$y
+
+df3$labelx= (df3$radius)*sin(df3$mid)+df3$x
+df3$labely= (df3$radius)*cos(df3$mid)+df3$y
+
+df3
+```
+
+
+## 5. 도넛 그리기
+
+```{r}
+p3<-p+geom_arc_bar(aes_string(x0 = "x", y0 = "y", r0 = as.character(r1),
+                              r = as.character(r2), start="start1",end="end1",
+                              fill="no", explode="focus"),color="white", 
+                   data = df3)
+p3<-p3+transparent()+ scale_fill_manual(values=subColor)+
+                        xlim(r3*c(-1,1))+ylim(r3*c(-1,1))+guides(fill=FALSE)
+
+                
+                
+p3<-p3+ geom_segment(aes_string(x="segx",y="segy",
+                                xend="segxend",yend="segyend"),data=df3)+
+     geom_text(aes_string(x="segxend",y="segyend",label="label",hjust="hjust",vjust="vjust"),
+              data=df3)
+                 
+p3                
+```
+
+## 6. 파이와 도넛 같이 그리기
+
+두개의  같이 그리기 위해 grid 패키지의 viewport를 사용합니다.
+
+```{r}
+require(grid)
+grid::grid.newpage()
+print(p1,vp=grid::viewport(height=1,width=1))
+print(p3,vp=grid::viewport(height=1,width=1))
+```
+
+
+## 7. 기타
+
+실제 webr 패키지에 있는 PieDonut 함수는 여러가지 옵션들을 지원하기 위해 훨씬 복잡합니다. 실제 함수의 소스를 분석하고자 하시는 분은 github 페이지를 이용하시기 바랍니다. 
+
+https://github.com/cardiomoon/webr
+
+github페이지에서 스타를 눌러주시면 개발자들에게 큰힘이 됩니다. 긴 글 읽으시느라 수고하셨습니다.
+
+

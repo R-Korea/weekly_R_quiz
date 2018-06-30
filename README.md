@@ -20,6 +20,8 @@ Table of Contents
    * [1 월](#1-월)
    * [2 월](#2-월)
    * [3 월](#3-월)
+   * [4 월](#4-월)
+   * [6 월](#6-월)
 
 ## 2017 년
 ### 9 월
@@ -236,6 +238,60 @@ Table of Contents
 </div>
 
 <a href="./201803/1.path_drawing/path_drawing_answer.R" target="_blank">정답 보기</a>
+</details>
+
+<details><summary>2. discretize</summary>
+    
+<a href="./201803/2.discretize/discretize_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q)</div>
+    
+<div align="center">
+  <img src="./201803/2.discretize/discretize_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201803/2.discretize/discretize_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 4 월
+<details><summary>1. Korea_20180427</summary>
+    
+<a href="./201804/1.Korea_20180427/Korea_20180427_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) 통일한국은 과연 우리의 미래가 될 수 있을까요?</div>
+    
+<div align="center">
+  <img src="./201804/1.Korea_20180427/Korea_20180427_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201804/1.Korea_20180427/Korea_20180427_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 6 월
+<details><summary>1. PieDonut</summary>
+    
+<a href="./201806/1.PieDonut/PieDonut_quiz.html" target="_blank">문제 바로 가기</a>
+
+<div><!DOCTYPE html></div>
+    
+<div align="center">
+  <img src="./201806/1.PieDonut/2.png" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201806/1.PieDonut/PieDonut_answer.Rmd" target="_blank">정답 보기</a>
+</details>
+
+<details><summary>2. Ribbons</summary>
+    
+<a href="./201806/2.Ribbons/Ribbons_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) geom_polygon, geom_ribbon, geom_area, geom_path 를 이용하여 4개의 리본을 그려주세요!</div>
+    
+<div align="center">
+  <img src="./201806/2.Ribbons/Ribbons_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+
 </details>
 
 

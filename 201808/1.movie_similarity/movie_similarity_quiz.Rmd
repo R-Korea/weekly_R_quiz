@@ -13,8 +13,6 @@ rm(list=ls())
 raw.data <- 
   starwars %>% 
   select(name, films)
-
-raw.data %>% head
 ```
 
 ![target!](movie_similarity_result.PNG)

@@ -33,3 +33,5 @@ df %>%
   scale_x_continuous(labels = function(x) paste(comma(x), '원'), limits = c(0,4500)) +
   labs(title='제품군별 고객수 객단가 추이', y='고객수', x='객단가')
 
+# facebook post
+# https://www.facebook.com/groups/KoreaRUsers/permalink/1245686742230692/

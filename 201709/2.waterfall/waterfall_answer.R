@@ -50,5 +50,5 @@ chart.data %>%
     axis.title = element_blank(),
     legend.position='none')
 
-# facebook post
+# facebook post : other answers
 # https://www.facebook.com/groups/krstudy/permalink/846465128861094/

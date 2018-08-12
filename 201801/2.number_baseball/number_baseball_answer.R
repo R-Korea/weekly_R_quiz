@@ -76,5 +76,5 @@ baseball <- function(){
 
 baseball()
 
-# facebook post
+# facebook post : other answers
 # https://www.facebook.com/groups/krstudy/permalink/918870458287227/

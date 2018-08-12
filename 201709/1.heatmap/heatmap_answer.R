@@ -57,5 +57,5 @@ ratio.data %>%
     axis.title.y=element_text(angle=0)) +
   labs(title='제품별 A/S 비율', y='A/S 연도', x='생산연도', fill='A/S 비율\n')
 
-# facebook post 
+# facebook post : other answers
 # https://www.facebook.com/groups/krstudy/permalink/844643992376541/

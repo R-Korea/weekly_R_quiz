@@ -32,5 +32,5 @@ stack.col <- function(d, k=1, v=2){
 
 stack.col(unstack.col(grade))
 
-# facebook post
+# facebook post : other answers
 # https://www.facebook.com/groups/krstudy/permalink/911832138991059/

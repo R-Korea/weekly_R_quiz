@@ -75,3 +75,6 @@ baseball <- function(){
 }
 
 baseball()
+
+# facebook post
+# https://www.facebook.com/groups/krstudy/permalink/918870458287227/

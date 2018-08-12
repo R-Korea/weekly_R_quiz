@@ -40,5 +40,5 @@ adjmat
 leading.num(adjmat, 1)
 leading.num(adjmat, 2)
 
-# facebook post
+# facebook post : other answers
 # https://www.facebook.com/groups/krstudy/permalink/880403138800626/

@@ -30,3 +30,6 @@ p2 <-
   clean.theme
 
 grid.arrange(p1, p2, ncol=2)
+
+# facebook post : other answers
+# https://www.facebook.com/groups/KoreaRUsers/permalink/1276993862433313/

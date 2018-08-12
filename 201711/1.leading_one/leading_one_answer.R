@@ -39,3 +39,6 @@ leading.num <- function(X, MARGIN){
 adjmat
 leading.num(adjmat, 1)
 leading.num(adjmat, 2)
+
+# facebook post
+# https://www.facebook.com/groups/krstudy/permalink/880403138800626/

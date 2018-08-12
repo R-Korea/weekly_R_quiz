@@ -29,5 +29,5 @@ ggplot(data=df, aes(x=month, y=profit)) +
   theme_classic() +
   labs(title='Monthly Profit: MA 3 month', x='')
 
-# facebook post
+# facebook post : other answers
 # https://www.facebook.com/groups/KoreaRUsers/permalink/1237259443073422/

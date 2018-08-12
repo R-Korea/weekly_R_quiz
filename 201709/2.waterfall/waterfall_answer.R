@@ -49,3 +49,6 @@ chart.data %>%
     axis.ticks = element_blank(),
     axis.title = element_blank(),
     legend.position='none')
+
+# facebook post
+# https://www.facebook.com/groups/krstudy/permalink/846465128861094/

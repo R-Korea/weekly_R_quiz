@@ -31,3 +31,6 @@ stack.col <- function(d, k=1, v=2){
 }
 
 stack.col(unstack.col(grade))
+
+# facebook post
+# https://www.facebook.com/groups/krstudy/permalink/911832138991059/

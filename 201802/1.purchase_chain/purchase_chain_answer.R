@@ -32,3 +32,6 @@ result # page column looks like <chr [4]> ...
 
 class(result) <- 'data.frame'
 result # page column show it's content well
+
+# facebook post
+# https://www.facebook.com/groups/KoreaRUsers/permalink/1223554364443930/

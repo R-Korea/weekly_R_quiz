@@ -2,6 +2,8 @@ Q) 사용자별 이용권 시작일 ~ 종료일 정보를 이용하여 다음과
 
 ```{r, message=FALSE, warning=FALSE}
 library(dplyr)
+library(ggplot2)
+
 set.seed(7)
 
 df <-

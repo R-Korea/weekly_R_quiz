@@ -52,3 +52,6 @@ p2 <-
   labs(title = '기간별 유효한 사용자')
 
 grid.arrange(p, p2, ncol=2)
+
+# facebook post : other answers
+# https://www.facebook.com/groups/krstudy/permalink/1101943866646551/

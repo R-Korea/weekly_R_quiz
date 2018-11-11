@@ -23,7 +23,6 @@ answer <-
 
 # facebook post : other answers
 # https://www.facebook.com/groups/KoreaRUsers/permalink/1454529008013130/
-# https://www.facebook.com/groups/krstudy/permalink/1123967354444202/
 
 # 실주소 예제 확인 방법
 # 도로명주소 안내 홈페이지 > 개발자센터 > 건물DB 다운로드 

@@ -22,6 +22,9 @@ Table of Contents
    * [3 월](#3-월)
    * [4 월](#4-월)
    * [6 월](#6-월)
+   * [8 월](#8-월)
+   * [10 월](#10-월-1)
+   * [11 월](#11-월-1)
 
 ## 2017 년
 ### 9 월
@@ -291,7 +294,49 @@ Table of Contents
   <img src="./201806/2.Ribbons/Ribbons_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
+<a href="./201806/2.Ribbons/Ribbons_answer.R" target="_blank">정답 보기</a>
+</details>
 
+### 8 월
+<details><summary>1. movie_similarity</summary>
+    
+<a href="./201808/1.movie_similarity/movie_similarity_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) starwars 시리즈들의 유사도를 등장인물들의 자카드 유사도를 통해 첨부 차트와 같이 표현해주세요...!</div>
+    
+<div align="center">
+  <img src="./201808/1.movie_similarity/movie_similarity_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201808/1.movie_similarity/movie_similarity_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 10 월
+<details><summary>1. flatrate</summary>
+    
+<a href="./201810/1.flatrate/flatrate_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) 사용자별 이용권 시작일 ~ 종료일 정보를 이용하여 다음과 같은 차트를 그려주세요...!</div>
+    
+<div align="center">
+  <img src="./201810/1.flatrate/flatrate_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201810/1.flatrate/flatrate_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 11 월
+<details><summary>1. address_cleaning</summary>
+    
+<a href="./201811/1.address_cleaning/address_cleaning_quiz.Rmd" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 데이터를 행정단위 '동' 상위 행정단위만 남겨주세요...!</div>
+    
+<div align="center">
+  <img src="./201811/1.address_cleaning/address_cleaning_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./201811/1.address_cleaning/address_cleaning_answer.R" target="_blank">정답 보기</a>
 </details>
 
 

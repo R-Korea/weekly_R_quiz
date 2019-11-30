@@ -26,14 +26,16 @@ not.found <-
 blacklist <- function(bike, not.found, not.found.limit){
   
 }
-
-blacklist(bike, not.found, 1) %>% View
 ```
 
 결과는 다음과 같습니다  
 
-연속 1회 조건   
+연속 1회 이상 조건 
+> blacklist(bike, not.found, 1) %>% View   
+
 ![target!](find_abuser_1.PNG)
 
-연속 5회 조건  
+연속 5회 이상 조건 
+> blacklist(bike, not.found, 5) %>% View  
+
 ![target!](find_abuser_5.PNG)

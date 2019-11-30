@@ -14,14 +14,10 @@ library(data.table)
 rm(list=ls())
 
 bike <- 
-  fread('bike_use_history.csv') %>%
-  mutate(time_at = as.POSIXct(time_at, format="%Y.%m.%d_%H:%M:%S")) %>%
-  mutate(status='bike_use')
+  fread('bike_use_history.csv')
 
 not.found <-
-  fread('not_found.csv') %>%
-  mutate(time_at = as.POSIXct(time_at, format="%Y.%m.%d_%H:%M:%S")) %>%
-  mutate(user_id = NA, status='not_found')
+  fread('not_found.csv')
 
 blacklist <- function(bike, not.found, not.found.limit){
   

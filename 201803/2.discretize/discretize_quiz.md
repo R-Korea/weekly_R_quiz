@@ -1,12 +1,12 @@
 Q) 
-주어진 numeric type vector를 적절한 구간으로 나누어 factor type으로 
-이산화하는 함수 `discretize` 를 만들어주세요 :)
+주어진 numeric type vector를 적절한 구간으로 나누어 factor type으로  
+이산화하는 함수 `discretize` 를 만들어주세요 :)  
 
-> parameter 설명
-> 1. breaks : 분할 구간 수 (= scalar), 사용자 지정 분할 포인트 (= vector)
-> 2. equal.count : 동일 관측치 개수 분할 (= TRUE), 동일 간격 분할 (= FALSE)
-> 3. labels : 사용자 지정 구간 라벨
-> 4. right : 구간 우측(= 큰값) 닫힘 (= TRUE), 구간 우측 열림 (= FALSE)
+> parameter 설명  
+> 1. breaks : 분할 구간 수 (= scalar), 사용자 지정 분할 포인트 (= vector)  
+> 2. equal.count : 동일 관측치 개수 분할 (= TRUE), 동일 간격 분할 (= FALSE)  
+> 3. labels : 사용자 지정 구간 라벨  
+> 4. right : 구간 우측(= 큰값) 닫힘 (= TRUE), 구간 우측 열림 (= FALSE)  
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 rm(list=ls())

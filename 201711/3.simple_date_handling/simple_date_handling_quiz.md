@@ -1,7 +1,7 @@
 Q) 고객별 초기날짜값(= init.buy) 및 다음 구매까지 걸린 일수(= terms)를 이용하여  
-첨부 그림과 같은 yyyy-MM-dd 형태로 표현하는 함수(= term.dates)를 작성해주세요 
+첨부 그림과 같은 yyyy-MM-dd 형태로 표현하는 함수(= term.dates)를 작성해주세요  
 
-> hint : class, unclass, apply, cumsum
+> hint : class, unclass, apply, cumsum  
 
 ```{r}
 set.seed(171124)

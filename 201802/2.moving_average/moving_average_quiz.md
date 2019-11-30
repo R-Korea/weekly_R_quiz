@@ -1,4 +1,4 @@
-Q) 주어진 데이터를 이용하여 3개월 이동평균 차트를 그려주세요! 
+Q) 주어진 데이터를 이용하여 3개월 이동평균 차트를 그려주세요!  
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 library(ggplot2)

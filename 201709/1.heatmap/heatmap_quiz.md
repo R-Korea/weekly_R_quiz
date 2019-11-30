@@ -1,6 +1,6 @@
-Q) 주어진 데이터를 이용해서 차트를 그려주세요 :)
+Q) 주어진 데이터를 이용해서 차트를 그려주세요 :)  
 
-![target!](heatmap_result.PNG)
+![target!](heatmap_result.PNG)  
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 library(dplyr)

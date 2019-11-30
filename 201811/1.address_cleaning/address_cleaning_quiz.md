@@ -1,4 +1,4 @@
-Q) 주어진 데이터를 행정단위 '동' 상위 행정단위만 남겨주세요...!
+Q) 주어진 데이터를 행정단위 '동' 상위 행정단위만 남겨주세요...!  
 
 ```{r, message=FALSE, warning=FALSE}
 library(dplyr)

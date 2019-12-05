@@ -28,6 +28,16 @@ data <-
     month_gap = month.gap(after_year, after_month, init_year, init_month)) %>%
   filter(month_gap >= 0) %>%
   mutate(user_count = abs(floor(rnorm(n(), 0, 5)*100 + 1000)))
+  
+max.data <-
+  data %>%
+  group_by(init) %>%
+  summarise(max_user_count = max(user_count))
+
+data <-
+  data %>%
+  inner_join(max.data, by=('init')) %>%
+  mutate(user_count = ifelse(month_gap == 0, max_user_count, user_count))
 ```
 
 ![target!](woodring_result.PNG)

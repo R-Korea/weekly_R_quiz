@@ -1,8 +1,8 @@
-Q) 첨부 그림과 같은 나이테 차트를 그려주세요!
+Q) 첨부 그림과 같은 나이테 차트를 그려주세요!  
 
-X축 : 서비스 이용월
-Y축 : 고객수
-범례-색상 : 최초서비스이용월 코호트
+X축 : 서비스 이용월  
+Y축 : 고객수  
+범례-색상 : 최초서비스이용월 코호트  
 
 ```{r}
 library(dplyr)
@@ -29,3 +29,5 @@ data <-
   filter(month_gap >= 0) %>%
   mutate(user_count = abs(floor(rnorm(n(), 0, 5)*100 + 1000)))
 ```
+
+![target!](woodring_result.PNG)

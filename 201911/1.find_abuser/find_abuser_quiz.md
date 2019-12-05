@@ -29,9 +29,9 @@ blacklist <- function(bike, not.found, not.found.limit){
 연속 1회 이상 조건 
 > blacklist(bike, not.found, 1) %>% View   
 
-![target!](find_abuser_1.PNG)
+![target!](find_abuser_1_result.PNG)
 
 연속 5회 이상 조건 
 > blacklist(bike, not.found, 5) %>% View  
 
-![target!](find_abuser_5.PNG)
+![target!](find_abuser_5_result.PNG)

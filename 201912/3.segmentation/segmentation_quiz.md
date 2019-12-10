@@ -1,7 +1,7 @@
-Q) 
-다음과 같은 이용자 세그멘테이션 테이블을 `input`으로 받아 
-시각화를 위한 기반 테이블 `output`을 제공하는 
-함수 `segments.view` 를 작성해주세요!
+Q)  
+다음과 같은 이용자 세그멘테이션 테이블을 `input`으로 받아  
+시각화를 위한 기반 테이블 `output`을 제공하는  
+함수 `segments.view` 를 작성해주세요!  
 
 ```{r}
 library(dplyr)

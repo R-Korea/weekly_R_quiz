@@ -3,6 +3,18 @@ Q)
 시각화를 위한 기반 테이블 `output`을 제공하는  
 함수 `segments.view` 를 작성해주세요!  
 
+`input`  
+
+![input!](input.jpg)  
+
+`output`  
+
+![output!](output.jpg)  
+
+`ggplot view`  
+
+![view!](segmentation_result.PNG)  
+
 ```{r}
 library(dplyr)
 library(tidyr)

@@ -13,7 +13,7 @@ chart_size 입력값을 기준으로 차트의 가로, 세로 크기를 잡아�
 
 ![inequality_result.PNG](inequality_result.PNG)
 
-참고로 사용되어야 하는데 컴퓨터에 아직 없는 package들을 repository 지정 후 install & load 하는 부분은 다음과 같습니다 :)  
+참고로 사용되어야 하는데 컴퓨터에 없는 package들을 repository 지정 후 install & load 하는 부분은 다음과 같습니다 :)  
 
 ```{r}
 # cmd call example : 

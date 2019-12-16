@@ -12,3 +12,33 @@ display_ratio 입력값을 기준으로 차트 상의 소득상위기준% 텍스
 chart_size 입력값을 기준으로 차트의 가로, 세로 크기를 잡아줍니다
 
 ![inequality_result.PNG](inequality_result.PNG)
+
+참고로 사용되는데 없는 package들을 repository 지정 후 install & load 하는 부분은 다음과 같습니다 :)  
+
+```{r}
+# cmd call example : 
+# Rscript --encoding=UTF-8 inequality_answer.R display_ratio chart_size
+# Rscript --encoding=UTF-8 inequality_answer.R ".01 .1 .3 .5" "17.8 17.8"
+
+# needed packages
+package.list <- 
+  c('dplyr','ggplot2','data.table','stringr','extrafont')
+
+# not installed packages among needed packages
+not.found.packages <- 
+  package.list[!package.list %in% installed.packages()[,1]]
+
+# set repos : cran.rstudio.com
+repos <- c('https://cran.rstudio.com/')
+names(repos) <- 'CRAN'
+
+# install.packages
+sapply(
+  not.found.packages, 
+  function(x) install.packages(pkgs=x, repos=repos, type='binary', quiet=TRUE))
+  
+# load packages
+sapply(
+  package.list, 
+  function(x) library(x, character.only=TRUE))
+```

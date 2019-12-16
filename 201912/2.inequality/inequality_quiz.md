@@ -5,7 +5,7 @@ CMD(terminal: command line interface)에서 아래와 같은 Rscript 명령어�
 - 출력 파일 : inequality_result.png  
 
 > cmd call example :  
-> Rscript --encoding=UTF-8 inequality_answer.R display_ratio chart_size
+> Rscript --encoding=UTF-8 inequality_answer.R display_ratio chart_size  
 > Rscript --encoding=UTF-8 inequality_answer.R ".01 .1 .3 .5" "17.8 17.8"  
 
 display_ratio 값을 기준으로 차트 상의 소득상위기준% 텍스트 표시 지점을 잡아줍니다

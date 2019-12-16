@@ -11,4 +11,4 @@ CMD(terminal: command line interface)에서 아래와 같은 Rscript 명령어�
 display_ratio 값을 기준으로 차트 상의 소득상위기준% 텍스트 표시 지점을 잡아줍니다
 chart_size 값을 기준으로 차트의 가로, 세로 크기를 잡아줍니다
 
-![inequality_result.png!](inequality_result.png)
+![inequality_result.PNG](inequality_result.PNG)

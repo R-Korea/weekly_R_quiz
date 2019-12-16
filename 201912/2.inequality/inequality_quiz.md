@@ -1,7 +1,7 @@
-Q) 주어진 소득(= income) 데이터를 이용하여 소득상위N%가 전체소득에서 차지하는 비중을 계산하고 차트를 그려주세요!  
+Q) 주어진 소득(= income.csv) 데이터를 이용하여 소득상위N%가 전체소득에서 차지하는 비중을 계산하고 차트로 그려주세요!  
 CMD(terminal: command line interface)에서 아래와 같은 Rscript 명령어로 실행할 수 있는 R 스크립트로 작성해야합니다!  
 
-- 데이터 파일 : income.csv  
+- 입력 파일 : income.csv  
 - 출력 파일 : inequality_result.PNG  
 
 > cmd call example :  

@@ -1,6 +1,6 @@
 Q) server 함수를 완성하여 plot1에서 드래그(=brush)한 데이터들을 plot2에 첨부그림과 같이 강조하는 shiny app을 만들어주세요!
 
-![result!](sync_plots_result.png) 
+![result!](sync_plots_result.PNG) 
 
 ```{r}
 library(shiny)

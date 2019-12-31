@@ -1,4 +1,4 @@
-Q) 첨부그림과 같이 datatable과 leaflet plot을 연동한 shiny app을 만들어주세요!
+Q) 그림과 같이 datatable과 leaflet plot을 연동한 shiny app을 만들어주세요!
 
 > 조건 :
 - table의 3, 7, 9, 10번 row는 처음부터 선택되어 있습니다

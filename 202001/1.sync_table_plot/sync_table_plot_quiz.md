@@ -1,12 +1,16 @@
 Q) 첨부그림과 같이 datatable과 leaflet plot을 연동한 shiny app을 만들어주세요!
 
 > 조건 :
-1. table의 3, 7, 9, 10번 row는 처음부터 선택되어 있습니다
-2. table의 row를 선택하면 plot의 해당하는 marker가 선명해집니다 (= 선택하지 않은 marker는 투명합니다)
-3. table의 row display는 6줄로 설정되어 있습니다 (= show 6 entries)
-4. leaflet tile은 Stamen.Toner로 설정합니다
+- table의 3, 7, 9, 10번 row는 처음부터 선택되어 있습니다
+- table의 row를 선택하면 plot의 해당하는 marker가 선명해집니다 (= 선택하지 않은 marker는 투명합니다)
+- table의 row display는 6줄로 설정되어 있습니다 (= show 6 entries)
+- leaflet tile은 Stamen.Toner로 설정합니다
+
+---
 
 ![result!](sync_table_plot_result.PNG) 
+
+---
 
 ```{r}
 library(dplyr)

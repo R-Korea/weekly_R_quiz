@@ -8,12 +8,12 @@ Usage:
 import subprocess
 from itertools import groupby
 
-from file_utils import Quiz, create_node, create_quizs, get_valid_path
+from file_utils import Quiz, create_node, create_quizzes, get_valid_path
 
 PATH_LIST = sorted(get_valid_path("."))
 NODE_LIST = [create_node(p) for p in PATH_LIST]
 QUIZ_LIST = sorted(
-    create_quizs(NODE_LIST), key=lambda q: (q.year, q.month, q.subject))
+    create_quizzes(NODE_LIST), key=lambda q: (q.year, q.month, q.subject))
 
 MARKDOWN_HEADER = """
 <div align="center">

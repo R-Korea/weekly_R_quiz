@@ -83,7 +83,7 @@ def create_node(path: str) -> Node:
     return Node(year, month, subject, path)
 
 
-def create_quizs(nodes: List[Node]) -> List[Quiz]:
+def create_quizzes(nodes: List[Node]) -> List[Quiz]:
     quiz_list = defaultdict(dict)  # type: DefaultDict[str, Dict[str, str]]
 
     for node in nodes:

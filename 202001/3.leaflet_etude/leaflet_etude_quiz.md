@@ -9,7 +9,7 @@ Q) 임의의 sf polygon object 를 넘기면 chart를 그려주는 함수 pretty
   - geometry 컬럼은 sfc_MULTIPOLYGON 입니다
 
 - pretty.view 함수의 arguments 는 data, map.provider, legend.cut, palette.name 총 4가지 입니다
-  - data 는 입력 데이터입니다
+  - data 는 입력 데이터입니다 (필수 정보)
   - map.provider 는 leaflet의 providers 입니다 (e.g. CartoDB.Positron)
   - legend.cut 은 입력 데이터의 value 컬럼을 discrete 하게 만들기 위한 구간 정보입니다
   - palette.name 은 RColorBrewer 이름입니다 (e.g. Blues)

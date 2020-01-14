@@ -13,16 +13,18 @@ leaflet() %>%
   addPolygons(data=polygons, color='black', weight=1, fillColor='gold', fillOpacity=.2) %>%
   addCircles(data=points, color=NA, weight=5, fillColor='blue', fillOpacity=1)
 
-result <-
+poly.sum <-
   polygons %>%
   st_intersection(points$geometry) %>% 
   group_by(adm_cd, adm_nm) %>%
-  summarise(count = n()) %>%
-  arrange(desc(count)) %>%
+  summarise(counts = n()) %>%
+  arrange(desc(counts)) %>%
   ungroup %>%
   as.data.frame %>%
   select(-geometry)
 
-polygons %>%
-  inner_join(result %>% select(adm_cd, count), by='adm_cd') %>%
-  mapview(zcol='count', map.type='CartoDB.Positron', alpha.region=.5)
+view.data <-
+  polygons %>%
+  inner_join(poly.sum %>% select(adm_cd, counts), by='adm_cd')
+
+mapview(view.data, zcol='counts', map.type='CartoDB.Positron', alpha.region=.5)

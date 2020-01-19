@@ -57,12 +57,12 @@ pretty.view <- function(data,
                         palette.name='Blues'){
 }
 
-pretty.view(view.data)
-
 pretty.view(
   data=view.data, 
   legend.cut=c(1,10,20,30,40,Inf), 
   map.provider=providers$CartoDB.Positron,
   palette.name='YlOrRd'
 )
+
+pretty.view(view.data)
 ```

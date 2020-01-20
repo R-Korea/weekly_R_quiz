@@ -14,7 +14,7 @@ Q) 다음 그림과 같은 매출 시뮬레이터를 만들어 주세요
 ---
   
 ![result_pic!](interactive_map_result.PNG) 
-> 실제 동작하는 어플리케이션 동영상 : interactive_map_result.mp4
+> 어플리케이션 영상 : `interactive_map_result.mp4` 참조
 
 ---
   

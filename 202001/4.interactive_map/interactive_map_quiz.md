@@ -13,7 +13,7 @@ Q) 다음 동영상과 같은 매출 시뮬레이터를 만들어 주세요
 
 ---
   
-![result_pic!](interactive_map_result.png) 
+![result_pic!](interactive_map_result.PNG) 
 ![result_movie!](interactive_map_result.mp4) 
 
 ---

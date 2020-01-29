@@ -450,7 +450,20 @@ Table of Contents
   <img src="./202001/3.leaflet_etude/leaflet_etude_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
+<a href="./202001/3.leaflet_etude/leaflet_etude_answer.R" target="_blank">정답 보기</a>
+</details>
 
+<details><summary>4. interactive_map</summary>
+    
+<a href="./202001/4.interactive_map/interactive_map_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 다음 그림과 같은 매출 시뮬레이터를 만들어 주세요</div>
+    
+<div align="center">
+  <img src="./202001/4.interactive_map/interactive_map_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202001/4.interactive_map/interactive_map_answer.R" target="_blank">정답 보기</a>
 </details>
 
 

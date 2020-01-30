@@ -1,4 +1,4 @@
-Q) 주어진 data의 hcode의 앞 N자리(=digit)를 key로 삼아 polygon들을 합쳐주는 함수 union_hcode를 완성해주세요! 
+Q) 주어진 data의 hcode 앞 N자리(=digit)를 key로 삼아 polygon들을 합쳐주는 함수 union_hcode를 완성해주세요! 
 
 ---
   

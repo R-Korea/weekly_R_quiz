@@ -1,10 +1,10 @@
 Q) 
-입력값으로 points 와 polygon 을 받은 후 
-서로 겹치는 부분을 Uber H3 hexagons 로 채워주는 함수 fill_h3 를 만들어주세요! 
-
-h3.res 를 통해 h3 hexagon 해상도를 조절할 수 있어야 합니다~
-
-fill.h3 <- function(points, polygon, h3.res){ ... }
+입력값으로 points 와 polygon 을 받은 후  
+서로 겹치는 부분을 Uber H3 hexagons 로 채워주는 함수 fill_h3 를 만들어주세요!  
+  
+h3.res 를 통해 h3 hexagon 해상도를 조절할 수 있어야 합니다~  
+  
+fill.h3 <- function(points, polygon, h3.res){ ... }  
 
 ---
   

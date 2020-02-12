@@ -38,8 +38,7 @@ formula <- mpg ~ .
 
 data <- 
   mtcars %>% 
-  filter(complete.cases(.)) %>%
-  mutate(idx = 1:n())
+  filter(complete.cases(.))
 
 train.idx <- 
   1:(nrow(data)*2/3)

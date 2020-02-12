@@ -19,7 +19,7 @@ Bar Graph 는 실제값과 예측값 간의 차이입니다 (= 실제값 - 예�
   
 ---
   
-![result!](shrinkage_methods.PNG) 
+![result!](shrinkage_methods_result.PNG) 
 
 ---
   

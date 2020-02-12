@@ -1,6 +1,6 @@
 Q)  
 
-주어진 formula 와 data 를 가공해 다음과 같은 차트를 그릴수 있도록 코드를 작성해주세요!  
+주어진 formula 와 data 를 가공해 다음과 같은 차트를 그릴 수 있도록 코드를 작성해주세요!  
 
 OLS : Ordinary Least Squares  
 Ridge : Ridge Regression  

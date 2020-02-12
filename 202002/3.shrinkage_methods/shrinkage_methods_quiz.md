@@ -5,6 +5,7 @@ Q)
 OLS : Ordinary Least Squares  
 Ridge : Ridge Regression  
 Lasso : Lasso Regression  
+RMSE : Root Mean Square Error  
 
 좌상단 차트는 각 모델의 계수값을 시각화하고 있으며  
 

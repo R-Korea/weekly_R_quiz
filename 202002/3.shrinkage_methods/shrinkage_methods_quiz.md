@@ -2,6 +2,12 @@ Q)
 
 주어진 formula 와 data 를 가공해 다음과 같은 차트를 그릴 수 있도록 코드를 작성해주세요!  
 
+---  
+  
+![result!](shrinkage_methods_result.PNG) 
+  
+---  
+  
 OLS : Ordinary Least Squares  
 Ridge : Ridge Regression  
 Lasso : Lasso Regression  
@@ -17,12 +23,6 @@ Line Graph 의 경우...
 점선은 모델의 예측값  
 
 Bar Graph 는 실제값과 예측값 간의 차이입니다 (= 실제값 - 예측값)  
-  
----
-  
-![result!](shrinkage_methods_result.PNG) 
-
----
   
 ```{r}
 library(dplyr)

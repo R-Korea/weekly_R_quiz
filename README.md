@@ -30,6 +30,7 @@ Table of Contents
    * [12 월](#12-월-1)
 * [2020 년](#2020-년)
    * [1 월](#1-월-1)
+   * [2 월](#2-월-1)
 
 ## 2017 년
 ### 9 월
@@ -464,6 +465,46 @@ Table of Contents
 </div>
 
 <a href="./202001/4.interactive_map/interactive_map_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 2 월
+<details><summary>1. union_hcode</summary>
+    
+<a href="./202002/1.union_hcode/union_hcode_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 data의 hcode 앞 N자리(=digit)를 key로 삼아 polygon들을 합쳐주는 함수 union_hcode를 완성해주세요!</div>
+    
+<div align="center">
+  <img src="./202002/1.union_hcode/union_hcode_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202002/1.union_hcode/union_hcode_answer.R" target="_blank">정답 보기</a>
+</details>
+
+<details><summary>2. fill_h3</summary>
+    
+<a href="./202002/2.fill_h3/fill_h3_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q)</div>
+    
+<div align="center">
+  <img src="./202002/2.fill_h3/fill_h3_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202002/2.fill_h3/fill_h3_answer.R" target="_blank">정답 보기</a>
+</details>
+
+<details><summary>3. shrinkage_methods</summary>
+    
+<a href="./202002/3.shrinkage_methods/shrinkage_methods_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q)</div>
+    
+<div align="center">
+  <img src="./202002/3.shrinkage_methods/shrinkage_methods_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202002/3.shrinkage_methods/shrinkage_methods_answer.R" target="_blank">정답 보기</a>
 </details>
 
 

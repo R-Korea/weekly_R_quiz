@@ -19,7 +19,6 @@ ui <- fluidPage(
 )
 
 server <- function(input, output){
-
   rv <- reactiveValues(
     clicks = data.frame(lng = numeric(), lat = numeric()),
     polygons = list()
@@ -27,7 +26,6 @@ server <- function(input, output){
   
   # map click
   observeEvent(input$map_click, {
-    
     lastest.click <- 
       data.frame(
         lng = input$map_click$lng, 

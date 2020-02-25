@@ -485,7 +485,7 @@ Table of Contents
     
 <a href="./202002/2.fill_h3/fill_h3_quiz.md" target="_blank">문제 바로 가기</a>
 
-<div>Q)</div>
+<div>Q) 입력 받은 points 와 polygon 의 겹치는 부분을 H3 hexagons 으로 채워주는 함수 fill_h3 를 만들어주세요!</div>
     
 <div align="center">
   <img src="./202002/2.fill_h3/fill_h3_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
@@ -498,13 +498,26 @@ Table of Contents
     
 <a href="./202002/3.shrinkage_methods/shrinkage_methods_quiz.md" target="_blank">문제 바로 가기</a>
 
-<div>Q)</div>
+<div>Q) 주어진 formula 와 data 를 가공해 다음과 같은 차트를 그릴 수 있도록 코드를 작성해주세요!</div>
     
 <div align="center">
   <img src="./202002/3.shrinkage_methods/shrinkage_methods_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
 <a href="./202002/3.shrinkage_methods/shrinkage_methods_answer.R" target="_blank">정답 보기</a>
+</details>
+
+<details><summary>4. district_maker</summary>
+    
+<a href="./202002/4.district_maker/district_maker_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 임의의 구역을 그리고 저장할 수 있는 샤이니 앱을 작성해주세요!</div>
+    
+<div align="center">
+  <img src="./202002/4.district_maker/district_maker_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202002/4.district_maker/district_maker_answer.R" target="_blank">정답 보기</a>
 </details>
 
 

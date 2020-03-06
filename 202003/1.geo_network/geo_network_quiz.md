@@ -38,9 +38,9 @@ point.network <- function(df){
 point.network(data)
 
 # 2. draw h3 center points as nodes & edges
-h3.network <- function(df, h3.res=11, node.weight, edge.weight, node.filter, edge.filter){
+h3.network <- function(df, h3.res=11, node.weight=3, edge.weight=3, node.filter=1, edge.filter=1){
 
 }
 
-h3.network(data, 3, 3, 1, 1)
+h3.network(data)
 ```

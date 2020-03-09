@@ -46,7 +46,7 @@ point.network <- function(df){
 point.network(data)
 
 # 2. draw h3 center points & lines
-h3.network <- function(df, h3.res=11, node.weight=3, edge.weight=3, node.filter=1, edge.filter=1){
+h3.network <- function(df, h3.res=11){
   
   df_to_point <- function(df){
     df %>%
@@ -79,30 +79,39 @@ h3.network <- function(df, h3.res=11, node.weight=3, edge.weight=3, node.filter=
   node <-
     h3.addrs %>%  
     group_by(h3_addr) %>%
-    summarise(node_count = n()) %>%
+    summarise(node_count = length(unique(idx))) %>%
     mutate(geometry = h3_to_point(h3_addr)) %>%
     st_as_sf
   
   h3.sorted.long <- 
     h3.addrs %>%
     group_by(idx) %>%
-    mutate(
-      idx.order = 1,
-      idx.order = cumsum(idx.order)
-    ) %>%
+    mutate(idx.order = 1, idx.order = cumsum(idx.order)) %>%
     ungroup
   
   h3.sorted.x <- h3.sorted.long %>% filter(idx.order == 1) %>% transmute(idx, h3_addr_x = h3_addr)
   h3.sorted.y <- h3.sorted.long %>% filter(idx.order == 2) %>% transmute(idx, h3_addr_y = h3_addr)
-  h3.sorted <- h3.sorted.x %>% inner_join(h3.sorted.y, by='idx')
+  
+  h3.sorted <- 
+    h3.sorted.x %>% 
+    inner_join(h3.sorted.y, by='idx') %>% 
+    group_by(h3_addr_x, h3_addr_y) %>%
+    mutate(idx.order = 1, idx.order = cumsum(idx.order)) %>%
+    ungroup
   
   edge.count <-
     h3.sorted %>%
     group_by(h3_addr_x, h3_addr_y) %>%
-    summarise(edge_count = n())    
+    summarise(edge_count = length(unique(idx)))    
+  
+  idx.filter <-
+    h3.sorted %>% 
+    filter(idx.order == 1) %>% 
+    .$idx
   
   edge <-
     h3.addrs %>%
+    filter(idx %in% idx.filter) %>%
     mutate(geometry = h3_to_point(h3_addr)) %>%
     st_sf %>%
     group_by(idx) %>%
@@ -112,13 +121,26 @@ h3.network <- function(df, h3.res=11, node.weight=3, edge.weight=3, node.filter=
     select(-count, -class_name) %>%
     st_cast('LINESTRING') %>%
     inner_join(h3.sorted, by='idx') %>%
-    inner_join(edge.count, by=c('h3_addr_x','h3_addr_y'))
+    inner_join(edge.count, by=c('h3_addr_x','h3_addr_y')) %>%
+    select(-idx.order)
   
-  leaflet() %>%
-    addTiles %>%
-    addPolygons(data=h3.border, color='gray', fillOpacity=0, opacity=.5, weight=1.5) %>%
-    addPolylines(data=edge %>% filter(edge_count >= edge.filter), color='blue', dashArray=6, weight=~edge_count*node.weight) %>%
-    addCircles(data=node %>% filter(node_count >= node.filter), fillColor='black', fillOpacity=.5, opacity=0, radius=~node_count*node.weight)
+  list(node=node, edge=edge, h3.border=h3.border)
 }
 
-h3.network(data)
+network <- h3.network(data)
+
+node <- network$node
+edge <- network$edge
+h3.border <- network$h3.border
+
+node.weight <- 3
+edge.weight <- 3 
+node.filter <- 1 
+edge.filter <- 1
+
+leaflet() %>%
+  addTiles %>%
+  addPolygons(data=h3.border, color='gray', fillOpacity=0, opacity=.5, weight=1.5) %>%
+  addPolylines(data=edge %>% filter(edge_count >= edge.filter), color='blue', dashArray=6, weight=~edge_count*node.weight) %>%
+  addCircles(data=node %>% filter(node_count >= node.filter), fillColor='black', fillOpacity=.5, opacity=0, radius=~node_count*node.weight)
+

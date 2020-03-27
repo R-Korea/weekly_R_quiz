@@ -78,3 +78,6 @@ leaflet() %>%
   addProviderTiles(providers$CartoDB.DarkMatter) %>%
   addPolygons(data=seoul, weight=3, dashArray=5, color='white', fillOpacity=0) %>%
   addPolygons(data=seoul.h3.full, weight=1, color='white')
+
+# facebook post : other answers
+# https://www.facebook.com/groups/krstudy/permalink/1488235758017358/

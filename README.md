@@ -32,6 +32,7 @@ Table of Contents
    * [1 월](#1-월-1)
    * [2 월](#2-월-1)
    * [3 월](#3-월-1)
+   * [4 월](#4-월-1)
 
 ## 2017 년
 ### 9 월
@@ -533,6 +534,20 @@ Table of Contents
 </div>
 
 <a href="./202003/1.geo_network/geo_network_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 4 월
+<details><summary>1. o2o_event_simulation</summary>
+    
+<a href="./202004/1.o2o_event_simulation/o2o_event_simulation_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) O2O(=Online to Offline) 이벤트 참여율을 시뮬레이션하는 샤이니 앱을 작성해주세요!</div>
+    
+<div align="center">
+  <img src="./202004/1.o2o_event_simulation/o2o_event_simulation_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202004/1.o2o_event_simulation/o2o_event_simulation_answer.R" target="_blank">정답 보기</a>
 </details>
 
 

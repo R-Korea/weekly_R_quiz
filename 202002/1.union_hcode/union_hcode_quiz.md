@@ -1,6 +1,6 @@
 Q) 주어진 data의 hcode 앞 N자리(=digit)를 key로 삼아 polygon들을 합쳐주는 함수 union_hcode를 완성해주세요! 
 
-> 행정동 정보(= polygons) 출처 : https://github.com/vuski/admdongkor
+> 행정동 정보 출처 : https://github.com/vuski/admdongkor
 
 ---
   

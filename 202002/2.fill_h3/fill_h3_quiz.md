@@ -4,6 +4,8 @@ h3.res 를 통해 h3 hexagon 해상도를 조절할 수 있어야 합니다~
   
 fill.h3 <- function(points, polygon, h3.res){ ... }  
 
+> 행정동 정보(= polygons) 출처 : https://github.com/vuski/admdongkor
+
 ---
   
 ![result!](fill_h3_result.PNG) 

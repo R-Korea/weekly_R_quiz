@@ -30,8 +30,11 @@ fill.h3 <- function(points, polygon, h3.res){
     unique %>%
     h3_to_point 
   
-  center.points %>%
-    st_intersection(polygon) %>%
+  inter.flag <-
+    center.points %>%
+    st_intersects(polygon, sparse=FALSE) 
+  
+  center.points[inter.flag] %>%
     point_to_h3(res=h3.res) %>%
     h3_to_polygon
 }

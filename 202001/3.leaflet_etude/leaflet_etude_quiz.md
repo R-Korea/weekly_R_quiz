@@ -14,7 +14,7 @@ Q) 임의의 sf polygon object 를 넘기면 chart를 그려주는 함수 pretty
   - legend.cut 은 입력 데이터의 value 컬럼을 discrete 하게 만들기 위한 구간 정보입니다 (선택)
   - palette.name 은 RColorBrewer 이름입니다 (선택)
 
-> 행정동 정보(= polygons) 출처 : https://github.com/vuski/admdongkor
+> 행정동 경계 출처 : https://github.com/vuski/admdongkor
 
 ---
   

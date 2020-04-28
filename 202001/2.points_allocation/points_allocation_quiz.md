@@ -1,6 +1,6 @@
 Q) 각 polygon 에 겹치는 point 수를 count 후 첨부 파일과 같이 시각화 해주세요!
   
-> 행정동 정보(= polygons) 출처 : https://github.com/vuski/admdongkor
+> 행정동 경계 출처 : https://github.com/vuski/admdongkor
   
 ---
   

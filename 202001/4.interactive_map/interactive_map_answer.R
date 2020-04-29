@@ -128,10 +128,8 @@ server <- function(input, output){
   
   # calculate revenue
   output$revenue <- renderText({
-    res <- rv$data %>% filter(clicked) 
-    
     if(nrow(res) > 0){
-      res %>%
+      rv$data %>% filter(clicked) %>%
         summarise(value = sum(value)) %>%
         as.data.frame %>%
         transmute(value = ifelse(is.na(value), '0', comma(value))) %>%

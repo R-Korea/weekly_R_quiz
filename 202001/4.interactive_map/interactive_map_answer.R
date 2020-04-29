@@ -128,14 +128,7 @@ server <- function(input, output){
   
   # calculate revenue
   output$revenue <- renderText({
-    
-    if(is.null(rv$data)){
-      rv$data <- rv$base.data
-    }
-    
-    res <-
-      rv$data %>%
-      filter(clicked) 
+    res <- rv$data %>% filter(clicked) 
     
     if(nrow(res) > 0){
       res %>%

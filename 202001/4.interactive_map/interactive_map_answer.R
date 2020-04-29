@@ -15,7 +15,7 @@ ui <- fluidPage(
   fluidRow(
     column(7, leafletOutput('map', height='800px')),
     column(3, 
-      selectInput('region', '구역:', c('여의도'=1, '팔달문'=2)),
+      selectInput('region', '구역:', choices=c('여의도'=1, '팔달문'=2), selected=2),
       actionButton('clear', '비우기'),
       actionButton('all', '전체 선택'),
       h3(''),
@@ -27,22 +27,20 @@ ui <- fluidPage(
 server <- function(input, output){
 
   rv <- reactiveValues(
-    data = yeoeuido,
-    refresh = FALSE 
+    base.data = NULL,
+    data = NULL
   )
   
   # dropdown : select region
   observeEvent(input$region, {
-    rv$data <- if(input$region == 1){
+    rv$base.data <- if(input$region == 1){
       yeoeuido
     }else if(input$region == 2){
       paldalmun
     }else{
       yeoeuido
     }
-    
-    # TRUE -> refresh view
-    rv$refresh <- TRUE
+    rv$data <- rv$base.data
   })
   
   # button click : select all
@@ -60,127 +58,81 @@ server <- function(input, output){
     # check map polygon selection : on/off
     before_state <- rv$data[rv$data$id == input$map_shape_click$id, ]$clicked
     rv$data[rv$data$id == input$map_shape_click$id, ]$clicked <- !before_state
+  })
+  
+  # if values of rv$data are changed then re-draw leaflet plot
+  observe({
+    # polygon viz
+    hos <- highlightOptions(weight=5, color='white', dashArray='', bringToFront=TRUE)
     
-    # FALSE -> maintain previous view : lng, lat, zoom
-    rv$refresh <- FALSE
+    # polygon label viz
+    labels <- sprintf('<strong>%s</strong><br/>매출: %s원', rv$data$name, comma(rv$data$value)) %>% lapply(HTML)
+    los <- labelOptions(style=list('font-weight'='normal', padding='3px 8px'), textsize='15px', direction='auto')
+    
+    # label only marker viz
+    marker.labels <- sprintf('<strong>%s</strong>', comma(rv$data$value)) %>% lapply(HTML)
+    marker.los <- labelOptions(noHide=TRUE, direction='center', textOnly=TRUE, textsize='12px')
+    centers <- suppressWarnings(st_centroid(rv$data))
+    
+    leafletProxy('map') %>%
+      removeShape(layerId=input$map_shape_click$id) %>%
+      removeMarker(layerId=input$map_shape_click$id) %>%
+      addPolygons(
+        data=rv$data,
+        color='white', weight=2, opacity=1, dashArray=3, 
+        fillColor=colorBin('Blues', domain=NULL)(rv$data$value), 
+        fillOpacity=ifelse(rv$data$clicked, 1, 0),
+        highlight=hos, label=labels, labelOptions=los,
+        layerId=rv$data$id
+      ) %>%
+      addLabelOnlyMarkers(
+        data=centers,
+        label=marker.labels, labelOptions=marker.los,
+        layerId=paste('center', rv$data$id, sep='_'))
   })
   
   # make view
   output$map <- renderLeaflet({
     
-    # polygon label info
-    centers <-
-      suppressWarnings(st_centroid(rv$data))
-
-    labels <-
-      sprintf(
-        '<strong>%s</strong><br/>매출: %s원',
-        rv$data$name,
-        comma(rv$data$value)
-      ) %>%
-      lapply(HTML)
-
-    los <-
-      labelOptions(
-        style=list('font-weight'='normal', padding='3px 8px'),
-        textsize='15px',
-        direction='auto'
-      )
-
-    hos <-
-      highlightOptions(
-        weight=5,
-        color='white',
-        dashArray='',
-        bringToFront=TRUE
-      )
-
-    # marker label info
-    marker.labels <-
-      sprintf(
-        '<strong>%s</strong>',
-        comma(rv$data$value)
-      ) %>%
-      lapply(HTML)
-
-    marker.los <-
-      labelOptions(
-        noHide=TRUE,
-        direction='center',
-        textOnly=TRUE,
-        textsize='12px'
-      )
+    # polygon viz
+    hos <- highlightOptions(weight=5, color='white', dashArray='', bringToFront=TRUE)
     
-    # leaflet making
-    if(length(input$map_shape_click) == 0 | rv$refresh){ # TRUE -> refresh view
-      
-      leaflet() %>%
-        addProviderTiles(providers$CartoDB.DarkMatter) %>%
-        addPolygons(
-          data=rv$data,
-          color='white', 
-          weight=2, 
-          opacity=1, 
-          dashArray=3, 
-          fillColor=colorBin('Blues', domain=NULL)(rv$data$value),
-          fillOpacity=ifelse(rv$data$clicked, 1, 0),
-          highlight=hos,
-          label=labels,
-          labelOptions=los,
-          layerId=rv$data$id
-        ) %>%
-        addLabelOnlyMarkers(
-          data=centers,
-          label=marker.labels,
-          labelOptions=marker.los
-        ) %>%
-        addLegend(
-          pal=colorBin('Blues', domain=summary(rv$data$value)[c(1,6)]),
-          values=rv$data$value,
-          opacity=.7,
-          title=NULL,
-          position='bottomright'
-        )
-      
-    }else{ # FALSE -> maintain previous view : lng, lat, zoom
-      
-      leaflet() %>%
-        addProviderTiles(providers$CartoDB.DarkMatter) %>%
-        addPolygons(
-          data=rv$data,
-          color='white', 
-          weight=2, 
-          opacity=1, 
-          dashArray=3, 
-          fillColor=colorBin('Blues', domain=NULL)(rv$data$value),
-          fillOpacity=ifelse(rv$data$clicked, 1, 0),
-          highlight=hos,
-          label=labels,
-          labelOptions=los,
-          layerId=rv$data$id
-        ) %>%
+    # polygon label viz
+    labels <- sprintf('<strong>%s</strong><br/>매출: %s원', rv$base.data$name, comma(rv$base.data$value)) %>% lapply(HTML)
+    los <- labelOptions(style=list('font-weight'='normal', padding='3px 8px'), textsize='15px', direction='auto')
+
+    # label only marker viz
+    marker.labels <- sprintf('<strong>%s</strong>', comma(rv$base.data$value)) %>% lapply(HTML)
+    marker.los <- labelOptions(noHide=TRUE, direction='center', textOnly=TRUE, textsize='12px')
+    centers <- suppressWarnings(st_centroid(rv$base.data))
+    
+    leaflet() %>%
+      addProviderTiles(providers$CartoDB.DarkMatter) %>%
+      addPolygons(
+        data=rv$base.data,
+        color='white', weight=2, opacity=1, dashArray=3, 
+        fillColor=colorBin('Blues', domain=NULL)(rv$base.data$value), 
+        fillOpacity=1,
+        highlight=hos, label=labels, labelOptions=los,
+        layerId=rv$base.data$id
+      ) %>%
       addLabelOnlyMarkers(
         data=centers,
-        label=marker.labels,
-        labelOptions=marker.los
-      ) %>%
+        label=marker.labels, labelOptions=marker.los,
+        layerId=paste('center', rv$base.data$id, sep='_')) %>%
       addLegend(
-        pal=colorBin('Blues', domain=summary(rv$data$value)[c(1,6)]),
-        values=rv$data$value,
-        opacity=.7,
-        title=NULL,
-        position='bottomright'
-      ) %>%
-      setView( # previous view : lng, lat, zoom
-        lat=input$map_center$lat, 
-        lng=input$map_center$lng, 
-        zoom=input$map_zoom
-      )
-    }
+        values=rv$base.data$value,
+        pal=colorBin('Blues', domain=summary(rv$base.data$value)[c(1,6)]),
+        title=NULL, opacity=.7, position='bottomright')
   })
   
   # calculate revenue
   output$revenue <- renderText({
+    
+    if(is.null(rv$data)){
+      rv$data <- rv$base.data
+    }
+    
     res <-
       rv$data %>%
       filter(clicked) 

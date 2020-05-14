@@ -7,7 +7,9 @@ Q) 주어진 행정동 지역과 H3 polygon을 맵핑해주세요!
 - 반드시 모든 행정동 단위의 경계가 온전히 H3 polygon 으로 감싸여야합니다  
 - 따라서 행정동 단위의 경계 부분의 H3 polygon 들은 첨부 스크린샷처럼 중복으로 맵핑되게 됩니다  
 - H3 polygon 의 해상도는 level 7 을 권장하며 다른 해상도로도 쉽게 조절할 수 있다면 더욱 좋습니다  
-
+  
+> 행정동 경계 출처 : https://github.com/vuski/admdongkor  
+  
 ---
   
 ![result_pic!](hcode_h3_mapping_result.PNG) 

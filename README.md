@@ -33,6 +33,7 @@ Table of Contents
    * [2 월](#2-월-1)
    * [3 월](#3-월-1)
    * [4 월](#4-월-1)
+   * [5 월](#5-월)
 
 ## 2017 년
 ### 9 월
@@ -548,6 +549,20 @@ Table of Contents
 </div>
 
 <a href="./202004/1.o2o_event_simulation/o2o_event_simulation_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 5 월
+<details><summary>1. hcode_h3_mapping</summary>
+    
+<a href="./202005/1.hcode_h3_mapping/hcode_h3_mapping_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 행정동 지역과 H3 polygon을 맵핑해주세요!</div>
+    
+<div align="center">
+  <img src="./202005/1.hcode_h3_mapping/hcode_h3_mapping_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202005/1.hcode_h3_mapping/hcode_h3_mapping_answer.R" target="_blank">정답 보기</a>
 </details>
 
 

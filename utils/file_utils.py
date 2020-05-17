@@ -18,7 +18,7 @@ from collections import namedtuple, defaultdict
 
 IGNORED_PATH = [
     "assets", ".git", ".cache", "Dockerfile", "docker-compose.yml", "utils",
-    "tests", "temp", ".mypy_cache", "main.py", "README.md", "LICENSE"
+    "tests", "temp", ".mypy_cache", "main.py", "README.md", "LICENSE", ".DS_Store"
 ]
 
 

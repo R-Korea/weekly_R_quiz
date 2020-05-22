@@ -7,6 +7,7 @@ Q) Waffle Chart 를 그려봅시다!
 - `shinydashboard` 패키지로 깔끔한 `tabBox` 구성을 만들어봅니다  
 - `DT` 패키지로 검색, 정렬, 페이징이 가능한 테이블을 붙여줍니다  
 - `showtext` 패키지로 `Nanum Pen Script` 를 받아와서 손글씨 스타일로 차트를 꾸며보세요!  
+- 아참, 현업에서 꼭 요청하는 테이블 데이터 다운로드 받기 버튼도 넣어서 마무리해봅시다  
   
 > 대한민국 시/도별 인구통계 이력 출처 : http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1B040A3  
 > showtext 패키지 글꼴 확인 : https://fonts.google.com/  

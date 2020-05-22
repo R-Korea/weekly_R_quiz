@@ -9,6 +9,7 @@ Q) Waffle Chart 를 그려봅시다!
 - `showtext` 패키지로 `Nanum Pen Script` 를 받아와서 손글씨 스타일로 차트를 꾸며보세요!  
   
 > 대한민국 시/도별 인구통계 이력 출처 : http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1B040A3  
+> showtext 패키지 글꼴 확인 : https://fonts.google.com/  
 
 ---
   

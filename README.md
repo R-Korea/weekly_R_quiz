@@ -565,6 +565,19 @@ Table of Contents
 <a href="./202005/1.hcode_h3_mapping/hcode_h3_mapping_answer.R" target="_blank">정답 보기</a>
 </details>
 
+<details><summary>2. waffle_chart</summary>
+    
+<a href="./202005/2.waffle_chart/waffle_chart_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) Waffle Chart 를 그려봅시다!</div>
+    
+<div align="center">
+  <img src="./202005/2.waffle_chart/waffle_chart_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202005/2.waffle_chart/waffle_chart_answer.R" target="_blank">정답 보기</a>
+</details>
+
 
 
 

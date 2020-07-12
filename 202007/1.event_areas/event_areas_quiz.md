@@ -54,13 +54,9 @@ result <- daily_matched_events(event_areas, events, '2020-05-01', '2020-06-30')
 
 show_date = '2020-05-22'
 
-result %>%
-  mutate(name = as.character(date)) %>%
-  filter(name == show_date) %>%
-  st_sf(crs=base_crs) %>%
-  leaflet() %>%
+leaflet() %>%
   addTiles %>%
-  addPolygons() %>%
+  addPolygons(data=result %>% filter(date == show_date) %>% st_sf(crs=base_crs)) %>%
   addCircles(data=events %>% filter(occur_at == as.Date(show_date)), color='red')
 ```
 ![](event_areas_result_03.PNG)  

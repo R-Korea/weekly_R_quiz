@@ -30,6 +30,7 @@ event_areas <-
 event_areas[1,1] <- NA
 event_areas
 ```
+![](event_areas_result_01.PNG)  
 
 ```{r, message=FALSE, warning=FALSE}
 set.seed(20200712)
@@ -42,6 +43,7 @@ events <-
 
 events
 ```
+![](event_areas_result_02.PNG)  
 
 ```
 daily_matched_events <- function(event_areas, events, from_date, to_date){
@@ -60,9 +62,10 @@ result %>%
   addTiles %>%
   addPolygons() %>%
   addCircles(data=events %>% filter(occur_at == as.Date(show_date)), color='red')
+```
+![](event_areas_result_03.PNG)  
 
+```{r}
 result %>% filter(date == show_date)
 ```
-
-![](event_areas_result_01.PNG)  
-![](event_areas_result_02.PNG)  
+![](event_areas_result_04.PNG)  

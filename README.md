@@ -34,6 +34,7 @@ Table of Contents
    * [3 월](#3-월-1)
    * [4 월](#4-월-1)
    * [5 월](#5-월)
+   * [7 월](#7-월)
 
 ## 2017 년
 ### 9 월
@@ -576,6 +577,20 @@ Table of Contents
 </div>
 
 <a href="./202005/2.waffle_chart/waffle_chart_answer.R" target="_blank">정답 보기</a>
+</details>
+
+### 7 월
+<details><summary>1. event_areas</summary>
+    
+<a href="./202007/1.event_areas/event_areas_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 이벤트 구역 내에서 발생한 이벤트 수를 집계해주는 함수 daily_matched_events 를 구현해주세요!</div>
+    
+<div align="center">
+  <img src="./202007/1.event_areas/event_areas_result_04.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202007/1.event_areas/event_areas_answer.R" target="_blank">정답 보기</a>
 </details>
 
 

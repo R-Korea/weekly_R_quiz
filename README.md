@@ -584,7 +584,7 @@ Table of Contents
     
 <a href="./202007/1.event_areas/event_areas_quiz.md" target="_blank">문제 바로 가기</a>
 
-<div>Q) 이벤트 구역 내에서 발생한 이벤트 수를 집계해주는 함수 daily_matched_events 를 구현해주세요!</div>
+<div>Q) 이벤트 구역 내에서 발생한 이벤트 수를 집계해주는 함수 daily_matched_points 를 구현해주세요!</div>
     
 <div align="center">
   <img src="./202007/1.event_areas/event_areas_result_04.PNG" alt="Quiz Image" width="50%" max-height="30%">

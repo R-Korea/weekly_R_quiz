@@ -17,8 +17,9 @@ from typing import List, Dict, DefaultDict
 from collections import namedtuple, defaultdict
 
 IGNORED_PATH = [
-    "assets", ".git", ".cache", "Dockerfile", "docker-compose.yml", "utils",
-    "tests", "temp", ".mypy_cache", "main.py", "README.md", "LICENSE", ".DS_Store"
+    "assets", ".git", ".github", "Pipfile", ".cache", "Dockerfile",
+    "docker-compose.yml", "utils", "tests", "temp", ".mypy_cache", "main.py",
+    "README.md", "LICENSE", ".DS_Store"
 ]
 
 
@@ -75,7 +76,10 @@ def create_node(path: str) -> Node:
     Returns:
         Node: Node information
     """
-    _, date, subject, _ = path.split(os.sep)
+    try:
+        _, date, subject, _ = path.split(os.sep)
+    except ValueError:
+        raise RuntimeError(f"{path} cannot be split")
 
     year = int(date[:4])
     month = int(date[-2:])

@@ -24,6 +24,7 @@ MARKDOWN_HEADER = """
 </div>
 
 # R Korea Weekly Quiz
+![Generate README](https://github.com/R-Korea/weekly_R_quiz/workflows/Generate%20README/badge.svg)
 
 R Korea에서 진행한 주말맞이 R Quiz 모음입니다.
 """
@@ -40,7 +41,8 @@ MARKDOWN_FOOTER = f"""
 ### Python
 
 ```shell
-python utils/print_markdown.py
+pipenv install # install dependencies
+pipenv run python utils/print_markdown.py
 ```
 """
 

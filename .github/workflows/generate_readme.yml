@@ -2,7 +2,8 @@ name: Generate README
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
   build:
@@ -11,11 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
+    - uses: dschep/install-pipenv-action@v1
 
+    - run: pipenv install
     - run: python utils/print_markdown.py
 
     - run: |

@@ -593,6 +593,19 @@ Table of Contents
 <a href="./202007/1.event_areas/event_areas_answer.R" target="_blank">정답 보기</a>
 </details>
 
+<details><summary>2. infection_simulation</summary>
+    
+<a href="./202007/2.infection_simulation/infection_simulation_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 사회 구성원들의 움직임에 따른 감염 시뮬레이션을 만들어주세요!</div>
+    
+<div align="center">
+  <img src="./202007/2.infection_simulation/infection_simulation_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+
+</details>
+
 
 
 

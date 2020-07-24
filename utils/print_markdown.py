@@ -6,7 +6,10 @@ Usage:
 
 """
 import subprocess
+import pytz
+
 from itertools import groupby
+from datetime import datetime
 
 from file_utils import Quiz, create_node, create_quizzes, get_valid_path
 
@@ -25,9 +28,21 @@ MARKDOWN_HEADER = """
 R Korea에서 진행한 주말맞이 R Quiz 모음입니다.
 """
 
-MARKDOWN_FOOTER = """
+SEOUL_TZ = pytz.timezone("Asia/Seoul")
+# For example, it would render "2020-07-24 11:08:35 (Asia/Seoul)".
+NOW = datetime.now().astimezone(SEOUL_TZ).strftime("%Y-%m-%d %H:%M:%S (Asia/Seoul)")
+
+MARKDOWN_FOOTER = f"""
 ## NOTES
-이 파일은 자동으로 생성되었습니다."""
+이 파일은 {NOW} 자동으로 생성되었습니다.
+
+## 생성 방법
+### Python
+
+```shell
+python utils/print_markdown.py
+```
+"""
 
 
 def print_year(year: int) -> str:

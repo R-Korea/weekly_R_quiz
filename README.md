@@ -4,6 +4,7 @@
 </div>
 
 # R Korea Weekly Quiz
+![Generate README](https://github.com/R-Korea/weekly_R_quiz/workflows/Generate%20README/badge.svg)
 
 R Korea에서 진행한 주말맞이 R Quiz 모음입니다.
 
@@ -610,4 +611,13 @@ Table of Contents
 
 
 ## NOTES
-이 파일은 자동으로 생성되었습니다.
+이 파일은 2020-07-25 22:08:45 (Asia/Seoul) 자동으로 생성되었습니다.
+
+## 생성 방법
+### Python
+
+```shell
+pipenv install # install dependencies
+pipenv run python utils/print_markdown.py
+```
+

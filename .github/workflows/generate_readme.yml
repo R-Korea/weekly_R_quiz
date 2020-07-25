@@ -12,10 +12,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+      # Pipenv uses 3.8
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
     - uses: dschep/install-pipenv-action@v1
 
     - run: pipenv install
-    - run: python utils/print_markdown.py
+    - run: pipenv run python utils/print_markdown.py
 
     - run: |
         git config --global user.name 'Curycu'

@@ -4,6 +4,7 @@
 </div>
 
 # R Korea Weekly Quiz
+![Generate README](https://github.com/R-Korea/weekly_R_quiz/workflows/Generate%20README/badge.svg)
 
 R Korea에서 진행한 주말맞이 R Quiz 모음입니다.
 
@@ -593,8 +594,30 @@ Table of Contents
 <a href="./202007/1.event_areas/event_areas_answer.R" target="_blank">정답 보기</a>
 </details>
 
+<details><summary>2. infection_simulation</summary>
+    
+<a href="./202007/2.infection_simulation/infection_simulation_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 사회 구성원들의 움직임에 따른 감염 시뮬레이션을 만들어주세요!</div>
+    
+<div align="center">
+  <img src="./202007/2.infection_simulation/infection_simulation_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+
+</details>
+
 
 
 
 ## NOTES
-이 파일은 자동으로 생성되었습니다.
+이 파일은 2020-07-25 22:08:45 (Asia/Seoul) 자동으로 생성되었습니다.
+
+## 생성 방법
+### Python
+
+```shell
+pipenv install # install dependencies
+pipenv run python utils/print_markdown.py
+```
+

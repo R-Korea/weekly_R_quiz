@@ -604,14 +604,14 @@ Table of Contents
   <img src="./202007/2.infection_simulation/infection_simulation_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
-
+<a href="./202007/2.infection_simulation/infection_simulation_answer.R" target="_blank">정답 보기</a>
 </details>
 
 
 
 
 ## NOTES
-이 파일은 2020-07-25 22:08:45 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-07-26 19:35:38 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

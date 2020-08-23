@@ -619,14 +619,14 @@ Table of Contents
   <img src="./202008/1.colour_etude/event_areas_result_02.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
-
+<a href="./202008/1.colour_etude/colour_etude_answer.R" target="_blank">정답 보기</a>
 </details>
 
 
 
 
 ## NOTES
-이 파일은 2020-08-16 00:18:11 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-08-23 22:29:03 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

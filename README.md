@@ -628,7 +628,7 @@ Table of Contents
     
 <a href="./202010/1.deadlines/deadlines_quiz.md" target="_blank">문제 바로 가기</a>
 
-<div>Q) 주어진 위경도 (경도=lat, 위도=lon) 좌표 및 반경(meter) 안쪽에 위치하는 선들을 체크하는 함수를 만들어주세요!</div>
+<div>Q) 주어진 위경도 (lat, lon) 좌표 및 반경 (radius, meter 단위) 안쪽에 위치하는 선들을 체크하는 함수 dead.line.check 를 만들어주세요!</div>
     
 <div align="center">
   <img src="./202010/1.deadlines/deadlines_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
@@ -641,7 +641,7 @@ Table of Contents
 
 
 ## NOTES
-이 파일은 2020-10-28 23:44:51 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-10-28 23:46:24 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

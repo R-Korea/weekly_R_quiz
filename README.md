@@ -36,6 +36,7 @@ Table of Contents
    * [4 월](#4-월-1)
    * [5 월](#5-월)
    * [7 월](#7-월)
+   * [8 월](#8-월-1)
 
 ## 2017 년
 ### 9 월
@@ -604,14 +605,28 @@ Table of Contents
   <img src="./202007/2.infection_simulation/infection_simulation_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
+<a href="./202007/2.infection_simulation/infection_simulation_answer.R" target="_blank">정답 보기</a>
+</details>
 
+### 8 월
+<details><summary>1. colour_etude</summary>
+    
+<a href="./202008/1.colour_etude/colour_etude_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 예전에 만들었던 이용자 세그먼트 교차비중 차트를 수정해달라는 요청이 들어왔습니다!</div>
+    
+<div align="center">
+  <img src="./202008/1.colour_etude/event_areas_result_02.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+<a href="./202008/1.colour_etude/colour_etude_answer.R" target="_blank">정답 보기</a>
 </details>
 
 
 
 
 ## NOTES
-이 파일은 2020-07-25 22:08:45 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-08-23 22:29:03 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

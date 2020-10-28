@@ -1,4 +1,4 @@
-Q) 주어진 위경도 (경도=lat, 위도=lon) 좌표로부터 주어진 반경(meter) 내 라인들을 체크하는 함수를 만들어주세요!
+Q) 주어진 위경도 (경도=lat, 위도=lon) 좌표 및 반경(meter) 안쪽에 위치하는 선들을 체크하는 함수를 만들어주세요!
 
 ![result_pic!](deadlines_result.PNG)  
   

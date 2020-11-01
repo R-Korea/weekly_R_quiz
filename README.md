@@ -634,14 +634,14 @@ Table of Contents
   <img src="./202010/1.deadlines/deadlines_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
-
+<a href="./202010/1.deadlines/deadlines_answer.R" target="_blank">정답 보기</a>
 </details>
 
 
 
 
 ## NOTES
-이 파일은 2020-10-28 23:46:24 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-11-01 19:07:21 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

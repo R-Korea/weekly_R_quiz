@@ -37,6 +37,7 @@ Table of Contents
    * [5 월](#5-월)
    * [7 월](#7-월)
    * [8 월](#8-월-1)
+   * [10 월](#10-월-2)
 
 ## 2017 년
 ### 9 월
@@ -622,11 +623,25 @@ Table of Contents
 <a href="./202008/1.colour_etude/colour_etude_answer.R" target="_blank">정답 보기</a>
 </details>
 
+### 10 월
+<details><summary>1. deadlines</summary>
+    
+<a href="./202010/1.deadlines/deadlines_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 위경도 (lat, lon) 좌표 및 반경 (radius, meter 단위) 안쪽에 위치하는 선들을 체크하는 함수 dead.line.check 를 만들어주세요!</div>
+    
+<div align="center">
+  <img src="./202010/1.deadlines/deadlines_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+
+</details>
+
 
 
 
 ## NOTES
-이 파일은 2020-08-23 22:29:03 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-10-28 23:46:24 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

@@ -9,6 +9,8 @@ Q) 실전에서 사용가능한 GIS 기반 BI 툴 한번 만들어봅시다!
 - 다시 Get Data 를 눌러 새로운 조건으로 데이터를 가져오면 map, chart, table이 초기화 됩니다. click 정보는 날아갑니다  
 - download 버튼을 누르면 table 탭의 내용을 csv 파일로 다운로드 받습니다  
 
+> 행정동 경계 출처 : https://github.com/vuski/admdongkor
+
 ---
   
 ![result_pic!](bi_etude_result.PNG) 

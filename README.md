@@ -38,6 +38,7 @@ Table of Contents
    * [7 월](#7-월)
    * [8 월](#8-월-1)
    * [10 월](#10-월-2)
+   * [11 월](#11-월-3)
 
 ## 2017 년
 ### 9 월
@@ -637,11 +638,25 @@ Table of Contents
 <a href="./202010/1.deadlines/deadlines_answer.R" target="_blank">정답 보기</a>
 </details>
 
+### 11 월
+<details><summary>1. bi_etude</summary>
+    
+<a href="./202011/1.bi_etude/bi_etude_quiz.md.R" target="_blank">문제 바로 가기</a>
+
+<div>Q) 실전에서 사용가능한 GIS 기반 BI 툴 한번 만들어봅시다!</div>
+    
+<div align="center">
+  <img src="./202011/1.bi_etude/bi_etude_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+
+</details>
+
 
 
 
 ## NOTES
-이 파일은 2020-11-01 19:07:21 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-11-15 13:08:49 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

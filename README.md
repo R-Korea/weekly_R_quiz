@@ -641,7 +641,7 @@ Table of Contents
 ### 11 월
 <details><summary>1. bi_etude</summary>
     
-<a href="./202011/1.bi_etude/bi_etude_quiz.md.R" target="_blank">문제 바로 가기</a>
+<a href="./202011/1.bi_etude/bi_etude_quiz.md" target="_blank">문제 바로 가기</a>
 
 <div>Q) 실전에서 사용가능한 GIS 기반 BI 툴 한번 만들어봅시다!</div>
     
@@ -656,7 +656,7 @@ Table of Contents
 
 
 ## NOTES
-이 파일은 2020-11-15 13:08:49 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-11-15 13:12:07 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

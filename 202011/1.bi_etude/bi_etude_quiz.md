@@ -32,6 +32,9 @@ library(ggplot2)
 library(scales)
 library(DT)
 
+library(curl)
+library(showtext)
+
 rm(list=ls())
 
 # pre setting ==================

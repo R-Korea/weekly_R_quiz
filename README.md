@@ -649,14 +649,14 @@ Table of Contents
   <img src="./202011/1.bi_etude/bi_etude_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
-
+<a href="./202011/1.bi_etude/bi_etude_answer.R" target="_blank">정답 보기</a>
 </details>
 
 
 
 
 ## NOTES
-이 파일은 2020-11-15 14:55:11 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-11-23 11:44:54 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

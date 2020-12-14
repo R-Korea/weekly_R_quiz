@@ -18,6 +18,9 @@ rm(list=ls())
 
 # pre setting ==================
 
+font_add_google('Nanum Gothic', 'nanum')
+showtext_auto()
+
 set.seed(20201115)
 
 geo.data <- 
@@ -198,7 +201,7 @@ server <- function(input, output){
     }
   })
   
-  output$table <- renderDataTable(
+  output$table <- DT::renderDataTable(
     rv$table.data,
     rownames=FALSE,
     selection=list(mode='multiple', target='row'),

@@ -39,6 +39,7 @@ Table of Contents
    * [8 월](#8-월-1)
    * [10 월](#10-월-2)
    * [11 월](#11-월-3)
+   * [12 월](#12-월-2)
 
 ## 2017 년
 ### 9 월
@@ -652,11 +653,25 @@ Table of Contents
 <a href="./202011/1.bi_etude/bi_etude_answer.R" target="_blank">정답 보기</a>
 </details>
 
+### 12 월
+<details><summary>1. quick_linear_modeler</summary>
+    
+<a href="./202012/1.quick_linear_modeler/quick_linear_modeler_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 간단한 선형모델들을 빠르게 탐색해볼 수 있는 샤이니 앱을 만들어주세요!</div>
+    
+<div align="center">
+  <img src="./202012/1.quick_linear_modeler/quick_linear_modeler_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+
+</details>
+
 
 
 
 ## NOTES
-이 파일은 2020-12-14 18:20:55 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-12-23 22:41:19 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

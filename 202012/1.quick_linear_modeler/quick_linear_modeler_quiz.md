@@ -9,7 +9,7 @@ Q) 간단한 선형모델들을 빠르게 탐색해볼 수 있는 샤이니 앱�
 - x-axis order column 에 x축 정렬 기준이 되는 컬럼을 선택합니다 (생략하는 경우 첫번째 컬럼 기준)    
 - Fit Model 버튼을 누르면 선택한 조건들을 적용하여 모델을 적합합니다  
 - chart 탭에는 실선은 실제값, 점선은 예측값, 막대바는 오차로 ggplot chart 를 그려줍니다 (Test RMSE도 표시)  
-- coef 탭에는 계수명과 그 값을 가로막대바로 표시해줍니다  
+- coef 탭에는 계수명과 그 값을 테이블 형태로 표시해줍니다  
 - Download 버튼을 누르면 model을 rds 파일로 다운로드 받습니다  
 - model fitting 중 error가 발생할 경우, input$message_box를 통해 에러메세지를 표시하고 fitting 을 중단합니다  
 

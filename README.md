@@ -664,14 +664,14 @@ Table of Contents
   <img src="./202012/1.quick_linear_modeler/quick_linear_modeler_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
-
+<a href="./202012/1.quick_linear_modeler/quick_linear_modeler_answer.R" target="_blank">정답 보기</a>
 </details>
 
 
 
 
 ## NOTES
-이 파일은 2020-12-23 22:49:30 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2020-12-27 20:22:45 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

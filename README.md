@@ -40,6 +40,8 @@ Table of Contents
    * [10 월](#10-월-2)
    * [11 월](#11-월-3)
    * [12 월](#12-월-2)
+* [2021 년](#2021-년)
+   * [3 월](#3-월-2)
 
 ## 2017 년
 ### 9 월
@@ -667,11 +669,26 @@ Table of Contents
 <a href="./202012/1.quick_linear_modeler/quick_linear_modeler_answer.R" target="_blank">정답 보기</a>
 </details>
 
+## 2021 년
+### 3 월
+<details><summary>1. summarise_commons</summary>
+    
+<a href="./202103/1.summarise_commons/summarise_commons_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 서울시 동 단위 행정구역 폴리곤을 구 단위로 묶으려합니다.</div>
+    
+<div align="center">
+  <img src="./202103/1.summarise_commons/summarise_commons_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+
+</details>
+
 
 
 
 ## NOTES
-이 파일은 2020-12-27 20:22:45 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2021-03-03 23:34:06 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

@@ -10,10 +10,6 @@ Q) 주어진 서울시 동 단위 행정구역 폴리곤을 구 단위로 묶으
 ---
   
 ```{r}
-if(!require('devtools')) install.packages('devtools')
-devtools::install_github("Curycu/valuemap")
-
-library(valuemap)
 library(dplyr)
 
 rm(list=ls())

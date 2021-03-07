@@ -681,14 +681,14 @@ Table of Contents
   <img src="./202103/1.summarise_commons/summarise_commons_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
 </div>
 
-
+<a href="./202103/1.summarise_commons/summarise_commons_answer.R" target="_blank">정답 보기</a>
 </details>
 
 
 
 
 ## NOTES
-이 파일은 2021-03-05 02:00:23 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2021-03-07 21:16:03 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

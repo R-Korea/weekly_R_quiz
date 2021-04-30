@@ -42,6 +42,7 @@ Table of Contents
    * [12 월](#12-월-2)
 * [2021 년](#2021-년)
    * [3 월](#3-월-2)
+   * [4 월](#4-월-2)
 
 ## 2017 년
 ### 9 월
@@ -684,11 +685,25 @@ Table of Contents
 <a href="./202103/1.summarise_commons/summarise_commons_answer.R" target="_blank">정답 보기</a>
 </details>
 
+### 4 월
+<details><summary>1. career_salary</summary>
+    
+<a href="./202104/1.career_salary/career_salary_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 연봉테이블 기준으로 테이블을 콘솔 출력하고 차트를 그려주는 함수 career_salary_graph 를 작성해주세요!</div>
+    
+<div align="center">
+  <img src="./202104/1.career_salary/career_salary_result_02.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+
+</details>
+
 
 
 
 ## NOTES
-이 파일은 2021-03-07 21:16:03 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2021-04-30 19:13:15 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

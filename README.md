@@ -707,10 +707,6 @@ Table of Contents
 
 <div>Q) 주어진 json 컬럼을 풀어 data.frame 으로 이어붙여주는 함수 unnest_json_col 함수를 만들어주세요!</div>
     
-<div align="center">
-  <img src="./202109/1.unnest_json_col/unnest_json_col_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
-</div>
-
 
 </details>
 
@@ -718,7 +714,7 @@ Table of Contents
 
 
 ## NOTES
-이 파일은 2021-09-29 22:08:43 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2021-09-29 22:13:25 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

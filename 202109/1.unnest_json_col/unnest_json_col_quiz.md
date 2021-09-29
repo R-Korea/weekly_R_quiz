@@ -14,7 +14,7 @@ data = tribble(
   'A', '{"Unit":["Marine","Medic","Tank"],"Action":"Move"}',
   'B', '{"Unit":["Marine","Medic","Tank"],"Action":"Attack","Target":"Zealot"}',
   'C', '{"Unit":["Medic"],"Action":"Heal","Target":["Marine","Ghost","Marine"]}',
-  'D', '{"Unit":["SCV"],"Action":"Repair","Target":["Tank"]}'
+  'D', '{"Unit":["SCV"],"Action":[],"Target":["Tank"]}'
 ) %>% as.data.frame
 
 unnest_json_col = function(df, col){

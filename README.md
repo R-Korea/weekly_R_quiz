@@ -43,6 +43,7 @@ Table of Contents
 * [2021 년](#2021-년)
    * [3 월](#3-월-2)
    * [4 월](#4-월-2)
+   * [9 월](#9-월-1)
 
 ## 2017 년
 ### 9 월
@@ -699,11 +700,25 @@ Table of Contents
 <a href="./202104/1.career_salary/career_salary_answer.R" target="_blank">정답 보기</a>
 </details>
 
+### 9 월
+<details><summary>1. unnest_json_col</summary>
+    
+<a href="./202109/1.unnest_json_col/unnest_json_col_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 json 컬럼을 풀어 data.frame 으로 이어붙여주는 함수 unnest_json_col 함수를 만들어주세요!</div>
+    
+<div align="center">
+  <img src="./202109/1.unnest_json_col/unnest_json_col_result.PNG" alt="Quiz Image" width="50%" max-height="30%">
+</div>
+
+
+</details>
+
 
 
 
 ## NOTES
-이 파일은 2021-05-03 10:04:13 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2021-09-29 22:07:33 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

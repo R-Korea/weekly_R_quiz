@@ -50,6 +50,5 @@ unnest_json_col(data, 2)
 #       C Target  Ghost
 #       C Target Marine
 #       D   Unit    SCV
-#       D Action Repair
 #       D Target   Tank
 ```

@@ -37,4 +37,23 @@ unnest_json_col = function(df, col){
 }
 
 unnest_json_col(data, 2)
+
+# session    key  value
+#       A   Unit Marine
+#       A   Unit  Medic
+#       A   Unit   Tank
+#       A Action   Move
+#       B   Unit Marine
+#       B   Unit  Medic
+#       B   Unit   Tank
+#       B Action Attack
+#       B Target Zealot
+#       C   Unit  Medic
+#       C Action   Heal
+#       C Target Marine
+#       C Target  Ghost
+#       C Target Marine
+#       D   Unit    SCV
+#       D Action Repair
+#       D Target   Tank
 ```

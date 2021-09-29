@@ -18,18 +18,7 @@ data = tribble(
 ) %>% as.data.frame
 
 unnest_json_col = function(df, col){
-  json_col = df[, col]
-  other_col = df[, -col, drop=FALSE]
-  res = data.frame()
-  suppressWarnings({
-    for(i in 1:nrow(df)){
-      json_elem = json_col[i]
-      other_row = other_col[i, , drop=FALSE]
-      r = cbind(other_row, json_to_df(json_elem))
-      res = rbind(res, r)
-    }
-  })
-  res
+
 }
 
 unnest_json_col(data, 2)

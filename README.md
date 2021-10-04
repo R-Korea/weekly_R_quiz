@@ -705,7 +705,7 @@ Table of Contents
     
 <a href="./202109/1.unnest_json_col/unnest_json_col_quiz.md" target="_blank">문제 바로 가기</a>
 
-<div>Q) 주어진 json 컬럼을 풀어 data.frame 으로 이어붙여주는 함수 unnest_json_col 함수를 만들어주세요!</div>
+<div>Q) 주어진 1단계 깊이 json 컬럼을 풀어 data.frame 으로 이어붙여주는 함수 unnest_json_col 함수를 만들어주세요!</div>
     
 
 </details>
@@ -714,7 +714,7 @@ Table of Contents
 
 
 ## NOTES
-이 파일은 2021-09-29 22:23:50 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2021-09-29 22:33:13 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

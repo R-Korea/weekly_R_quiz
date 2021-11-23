@@ -44,6 +44,7 @@ Table of Contents
    * [3 월](#3-월-2)
    * [4 월](#4-월-2)
    * [9 월](#9-월-1)
+   * [11 월](#11-월-4)
 
 ## 2017 년
 ### 9 월
@@ -710,11 +711,21 @@ Table of Contents
 <a href="./202109/1.unnest_json_col/unnest_json_col_answer.R" target="_blank">정답 보기</a>
 </details>
 
+### 11 월
+<details><summary>1. cumulative_distinct_count</summary>
+    
+<a href="./202111/1.cumulative_distinct_count/cumulative_distinct_count_quiz.md" target="_blank">문제 바로 가기</a>
+
+<div>Q) 주어진 데이터셋을 이용해 그룹별, 시간대별 누적매출 및 누적고객수를 구해주세요!</div>
+    
+
+</details>
+
 
 
 
 ## NOTES
-이 파일은 2021-10-04 22:28:59 (Asia/Seoul) 자동으로 생성되었습니다.
+이 파일은 2021-11-23 23:02:06 (Asia/Seoul) 자동으로 생성되었습니다.
 
 ## 생성 방법
 ### Python

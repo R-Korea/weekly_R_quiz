@@ -83,9 +83,7 @@ cumulative_data = function(data, colnm){
     mutate(.tidx = v) %>% 
     rbind(u, .)
   
-  result = Reduce(x=iter, f=bind_f, init=data.frame())
-  
-  result %>% 
+  Reduce(x=iter, f=bind_f, init=data.frame()) %>% 
     mutate({{colnm}} := .tidx) %>% 
     select(-.tidx)
 }

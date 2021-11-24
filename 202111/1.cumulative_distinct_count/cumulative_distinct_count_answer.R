@@ -1,8 +1,3 @@
-data = c(1,3,NA)
-
-mean(data, na.rm=T)
-sd(data, na.rm=T)
-
 library(dplyr)
 library(tidyr)
 

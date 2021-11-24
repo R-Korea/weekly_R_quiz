@@ -87,10 +87,9 @@ cumulative_data = function(data, colnm){
     select(-.tidx)
 }
 
-result = data %>% cumulative_data('time') 
-
 # 3-2. summarise & display
-result %>% 
+data %>% 
+  cumulative_data('time') %>% 
   group_by(group, time) %>%
   summarise(
     c_revenue = sum(revenue),

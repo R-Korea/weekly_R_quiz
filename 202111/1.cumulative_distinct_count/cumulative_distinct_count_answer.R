@@ -47,8 +47,7 @@ for(i in iter){
     filter(time <= i) %>% 
     mutate(.tidx = i)
   
-  result = 
-    rbind(result, sub_data)
+  result = rbind(result, sub_data)
 }
 
 result = 

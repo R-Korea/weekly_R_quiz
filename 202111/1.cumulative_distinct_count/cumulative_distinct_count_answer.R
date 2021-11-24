@@ -75,9 +75,7 @@ result %>%
 # 3-1. make cumulative data-set 
 cumulative_data = function(data, colnm){
   target_col = data[[colnm]]
-  
-  iter = 
-    target_col %>% sort %>% unique
+  iter = target_col %>% sort %>% unique
   
   bind_f = function(u, v) 
     data %>% 
@@ -92,9 +90,7 @@ cumulative_data = function(data, colnm){
     select(-.tidx)
 }
 
-result = 
-  data %>% 
-  cumulative_data('time') 
+result = data %>% cumulative_data('time') 
 
 # 3-2. summarise & display
 result %>% 
